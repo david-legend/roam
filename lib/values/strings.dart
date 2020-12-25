@@ -2,7 +2,7 @@ part of values;
 
 class StringConst {
   //strings
-  static const String APP_NAME = "Flutter Catalog";
+  static const String APP_NAME = "Roam App";
 
   //Categories
   static const String CATEGORIES = "Categories";

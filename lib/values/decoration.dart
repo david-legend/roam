@@ -6,6 +6,9 @@ class Decorations {
     Color color = const Color(0xFFD6D7FB),
   }) {
     return BoxDecoration(
-        boxShadow: [BoxShadow(blurRadius: blurRadius, color: color)]);
+      boxShadow: [
+        BoxShadow(blurRadius: blurRadius, color: color),
+      ],
+    );
   }
 }
