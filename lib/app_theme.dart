@@ -26,11 +26,11 @@ class AppTheme {
   }
 
   static const ColorScheme lightColorScheme = ColorScheme(
-    primary: Color(0xFFFF6673),
-    primaryVariant: Color(0xFF117378),
-    secondary: Color(0xFFEFF3F3),
-    secondaryVariant: Color(0xFFFAFBFB),
-    background: Color(0xFFE6EBEB),
+    primary: AppColors.primaryColor,
+    primaryVariant: AppColors.secondaryColor,
+    secondary: AppColors.accentColor,
+    secondaryVariant: AppColors.accentColor,
+    background: Colors.white,
     surface: Color(0xFFFAFBFB),
     onBackground: Colors.white,
     error: _lightFillColor,
