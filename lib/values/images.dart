@@ -20,4 +20,15 @@ class ImagePath {
   static const String NAVIGATION = "$imageDir/navigation.png";
   static const String TRIPS = "$imageDir/trips.png";
   static const String LIGHT_ELLIPSE = "$imageDir/light_ellipse.svg";
+
+  static const String ADVENTURE = "$imageDir/adventure.png";
+  static const String BEACH = "$imageDir/beach.png";
+  static const String CULTURE = "$imageDir/culture.png";
+  static const String FOOD = "$imageDir/food.png";
+  static const String MOUNTAIN = "$imageDir/mountain.png";
+  static const String NATURE = "$imageDir/nature.png";
+  static const String PEOPLE = "$imageDir/people.png";
+  static const String RESORT = "$imageDir/resort.png";
+  static const String URBAN = "$imageDir/urban.png";
+  static const String WILDLIFE = "$imageDir/wildlife.png";
 }

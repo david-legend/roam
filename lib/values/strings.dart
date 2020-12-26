@@ -22,6 +22,24 @@ class StringConst {
   static const String LOG_IN = "Log in";
   static const String SIGN_UP = "Sign up";
 
+  //Select Interest
+  static const String HELLO = "Hello ";
+  static const String KRISTIN = "Kristin ";
+  static const String INTEREST = "what do you love most about travelling?";
+  static const String SELECT_5 = "Select 5 or more ";
+
+  //Interests
+  static const String ADVENTURE = "Adventure";
+  static const String BEACH = "Beach";
+  static const String CULTURE = "Culture";
+  static const String FOOD = "Food";
+  static const String MOUNTAIN = "Mountain";
+  static const String NATURE = "Nature";
+  static const String PEOPLE = "People";
+  static const String RESORT = "Resort";
+  static const String URBAN = "Urban";
+  static const String WILDLIFE = "Wildlife";
+
   //hint_text
   static const String FULL_NAME = "Full Name";
   static const String PASSWORD = "Password";

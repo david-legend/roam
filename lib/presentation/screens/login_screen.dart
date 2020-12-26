@@ -1,11 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
 import 'package:roam/presentation/widgets/custom_text_field.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
+import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -82,9 +83,9 @@ class LoginScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_24),
           child: CustomTextField(
             hasTitle: true,
-            fieldTitle: StringConst.FULL_NAME,
+            fieldTitle: StringConst.EMAIL,
             fieldTitleTextStyle: titleTextStyle,
-            hintText: StringConst.FULL_NAME_HINT_TEXT,
+            hintText: StringConst.EMAIL_HINT_TEXT,
             hintTextStyle: hintTextStyle,
             fillColor: AppColors.white50,
           ),
@@ -131,7 +132,9 @@ class LoginScreen extends StatelessWidget {
           height: Sizes.HEIGHT_56,
           margin: const EdgeInsets.symmetric(horizontal: Sizes.MARGIN_24),
           child: CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              ExtendedNavigator.root.push(Routes.selectInterestScreen);
+            },
             borderRadius: Sizes.RADIUS_8,
             title: StringConst.LOG_IN,
             textStyle: theme.textTheme.subtitle1.copyWith(
@@ -140,33 +143,38 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
         Spacer(),
-        Container(
-          padding: EdgeInsets.only(
-            bottom: Sizes.PADDING_2, // space between underline and text
-          ),
-          decoration: BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                color: AppColors.secondaryColor, // Text colour here
-                width: Sizes.WIDTH_1, // Underline width
+        InkWell(
+          onTap: () {
+            ExtendedNavigator.root.push(Routes.signUpScreen);
+          },
+          child: Container(
+            padding: EdgeInsets.only(
+              bottom: Sizes.PADDING_2, // space between underline and text
+            ),
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: AppColors.secondaryColor, // Text colour here
+                  width: Sizes.WIDTH_1, // Underline width
+                ),
               ),
             ),
-          ),
-          child: RichText(
-            text: TextSpan(
-              text: StringConst.DONT_HAVE_AN_ACCOUNT,
-              style: theme.textTheme.bodyText2.copyWith(
-                color: AppColors.secondaryColor,
-              ),
-              children: <TextSpan>[
-                TextSpan(
-                  text: StringConst.CREATE_ACCOUNT,
-                  style: theme.textTheme.bodyText2.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.secondaryColor,
-                  ),
+            child: RichText(
+              text: TextSpan(
+                text: StringConst.DONT_HAVE_AN_ACCOUNT,
+                style: theme.textTheme.bodyText2.copyWith(
+                  color: AppColors.secondaryColor,
                 ),
-              ],
+                children: <TextSpan>[
+                  TextSpan(
+                    text: StringConst.CREATE_ACCOUNT,
+                    style: theme.textTheme.bodyText2.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.secondaryColor,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
