@@ -28,6 +28,21 @@ class StringConst {
   static const String INTEREST = "what do you love most about travelling?";
   static const String SELECT_5 = "Select 5 or more ";
   static const String NEXT = "Next";
+  static const String FINISH = "Finish";
+
+  //Follow Friends
+  static const String FOLLOW_FRIENDS =
+      "Follow friends and travel enthusiast with similar interest as you";
+  static const String FOLLOW = "Follow";
+  static const String FOLLOWING = "Following";
+  static const String TRAVELLERS_STARS = "travellers stars";
+
+  static const String CODY = "Cody Fisher";
+  static const String DARELL = "Darell Steward";
+  static const String ESTHER = "Esther Howard";
+  static const String HAWKINS = "Guy Hawkins";
+  static const String JANE = "Jane Cooper";
+  static const String LESLIE = "Leslie Alexander";
 
   //Interests
   static const String ADVENTURE = "Adventure";

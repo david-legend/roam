@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
 import 'package:roam/presentation/widgets/interest_card.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
+import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
 
 class InterestItem {
@@ -73,7 +75,9 @@ class SelectInterestScreen extends StatelessWidget {
           ),
           SpaceH24(),
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              ExtendedNavigator.root.push(Routes.followScreen);
+            },
             height: Sizes.HEIGHT_56,
             title: StringConst.NEXT,
             borderRadius: Sizes.RADIUS_8,

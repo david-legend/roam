@@ -9,8 +9,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../presentation/screens/follow_screen.dart';
 import '../presentation/screens/login_screen.dart';
 import '../presentation/screens/onBoarding_screen.dart';
+import '../presentation/screens/root_screen.dart';
 import '../presentation/screens/select_interest_screen.dart';
 import '../presentation/screens/signup_screen.dart';
 import '../presentation/screens/splash_screen.dart';
@@ -21,12 +23,16 @@ class Routes {
   static const String loginScreen = '/login-screen';
   static const String signUpScreen = '/sign-up-screen';
   static const String selectInterestScreen = '/select-interest-screen';
+  static const String followScreen = '/follow-screen';
+  static const String rootScreen = '/root-screen';
   static const all = <String>{
     splashScreen,
     onBoardingScreen,
     loginScreen,
     signUpScreen,
     selectInterestScreen,
+    followScreen,
+    rootScreen,
   };
 }
 
@@ -39,6 +45,8 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.loginScreen, page: LoginScreen),
     RouteDef(Routes.signUpScreen, page: SignUpScreen),
     RouteDef(Routes.selectInterestScreen, page: SelectInterestScreen),
+    RouteDef(Routes.followScreen, page: FollowScreen),
+    RouteDef(Routes.rootScreen, page: RootScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -70,6 +78,18 @@ class AppRouter extends RouterBase {
     SelectInterestScreen: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => SelectInterestScreen(),
+        settings: data,
+      );
+    },
+    FollowScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => FollowScreen(),
+        settings: data,
+      );
+    },
+    RootScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => RootScreen(),
         settings: data,
       );
     },

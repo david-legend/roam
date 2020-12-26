@@ -5,7 +5,7 @@ class AppColors {
   static const Color secondaryColor = Color(0xFF1B5755);
   static const Color accentColor = Color(0xFF2762CB);
 
-  static const Color primaryText = Color(0xFF000000);
+  static const Color primaryText = Color(0xFF1B5755);
 
   //Black
   static const Color black = Color(0xFF000000);
@@ -29,4 +29,7 @@ class AppColors {
   static const Color orange50 = Color(0xFFF35A2A);
 
   static const Color facebookBlue = Color(0xFF44619D);
+
+  //Yellow
+  static const Color yellow = Color(0xFFFBBA3E);
 }

@@ -31,4 +31,11 @@ class ImagePath {
   static const String RESORT = "$imageDir/resort.png";
   static const String URBAN = "$imageDir/urban.png";
   static const String WILDLIFE = "$imageDir/wildlife.png";
+
+  static const String CODY = "$imageDir/cody.png";
+  static const String DARELL = "$imageDir/darell.png";
+  static const String ESTHER = "$imageDir/esther.png";
+  static const String HAWKINS = "$imageDir/hawkins.png";
+  static const String JANE = "$imageDir/jane.png";
+  static const String LESLIE = "$imageDir/leslie.png";
 }

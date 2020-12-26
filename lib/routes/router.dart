@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route_annotations.dart';
+import 'package:roam/presentation/screens/follow_screen.dart';
 import 'package:roam/presentation/screens/login_screen.dart';
 import 'package:roam/presentation/screens/onBoarding_screen.dart';
+import 'package:roam/presentation/screens/root_screen.dart';
 import 'package:roam/presentation/screens/select_interest_screen.dart';
 import 'package:roam/presentation/screens/signup_screen.dart';
 import 'package:roam/presentation/screens/splash_screen.dart';
@@ -15,6 +17,10 @@ import 'package:roam/presentation/screens/splash_screen.dart';
     MaterialRoute(page: LoginScreen),
     MaterialRoute(page: SignUpScreen),
     MaterialRoute(page: SelectInterestScreen),
+    MaterialRoute(page: FollowScreen),
+
+    //Inside App
+    MaterialRoute(page: RootScreen),
   ],
 )
 class $AppRouter {}
