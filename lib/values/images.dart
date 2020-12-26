@@ -38,4 +38,7 @@ class ImagePath {
   static const String HAWKINS = "$imageDir/hawkins.png";
   static const String JANE = "$imageDir/jane.png";
   static const String LESLIE = "$imageDir/leslie.png";
+  static const String HOME = "$imageDir/home.svg";
+  static const String SUITCASE = "$imageDir/suitcase.svg";
+  static const String KRISTIN_SM = "$imageDir/kristin_sm.png";
 }

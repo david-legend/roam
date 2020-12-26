@@ -9,10 +9,17 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../presentation/screens/discover_screen.dart';
 import '../presentation/screens/follow_screen.dart';
+import '../presentation/screens/home_screen.dart';
 import '../presentation/screens/login_screen.dart';
+import '../presentation/screens/my_trips_screen.dart';
 import '../presentation/screens/onBoarding_screen.dart';
+import '../presentation/screens/place_screen.dart';
+import '../presentation/screens/plan_trip_screen.dart';
+import '../presentation/screens/profile_screen.dart';
 import '../presentation/screens/root_screen.dart';
+import '../presentation/screens/saved_places_screen.dart';
 import '../presentation/screens/select_interest_screen.dart';
 import '../presentation/screens/signup_screen.dart';
 import '../presentation/screens/splash_screen.dart';
@@ -25,6 +32,13 @@ class Routes {
   static const String selectInterestScreen = '/select-interest-screen';
   static const String followScreen = '/follow-screen';
   static const String rootScreen = '/root-screen';
+  static const String homeScreen = '/home-screen';
+  static const String discoverScreen = '/discover-screen';
+  static const String savedPlacesScreen = '/saved-places-screen';
+  static const String profileScreen = '/profile-screen';
+  static const String myTripsScreen = '/my-trips-screen';
+  static const String planTripScreen = '/plan-trip-screen';
+  static const String placeScreen = '/place-screen';
   static const all = <String>{
     splashScreen,
     onBoardingScreen,
@@ -33,6 +47,13 @@ class Routes {
     selectInterestScreen,
     followScreen,
     rootScreen,
+    homeScreen,
+    discoverScreen,
+    savedPlacesScreen,
+    profileScreen,
+    myTripsScreen,
+    planTripScreen,
+    placeScreen,
   };
 }
 
@@ -47,6 +68,13 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.selectInterestScreen, page: SelectInterestScreen),
     RouteDef(Routes.followScreen, page: FollowScreen),
     RouteDef(Routes.rootScreen, page: RootScreen),
+    RouteDef(Routes.homeScreen, page: HomeScreen),
+    RouteDef(Routes.discoverScreen, page: DiscoverScreen),
+    RouteDef(Routes.savedPlacesScreen, page: SavedPlacesScreen),
+    RouteDef(Routes.profileScreen, page: ProfileScreen),
+    RouteDef(Routes.myTripsScreen, page: MyTripsScreen),
+    RouteDef(Routes.planTripScreen, page: PlanTripScreen),
+    RouteDef(Routes.placeScreen, page: PlaceScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -90,6 +118,48 @@ class AppRouter extends RouterBase {
     RootScreen: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => RootScreen(),
+        settings: data,
+      );
+    },
+    HomeScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => HomeScreen(),
+        settings: data,
+      );
+    },
+    DiscoverScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => DiscoverScreen(),
+        settings: data,
+      );
+    },
+    SavedPlacesScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => SavedPlacesScreen(),
+        settings: data,
+      );
+    },
+    ProfileScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => ProfileScreen(),
+        settings: data,
+      );
+    },
+    MyTripsScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => MyTripsScreen(),
+        settings: data,
+      );
+    },
+    PlanTripScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => PlanTripScreen(),
+        settings: data,
+      );
+    },
+    PlaceScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => PlaceScreen(),
         settings: data,
       );
     },
