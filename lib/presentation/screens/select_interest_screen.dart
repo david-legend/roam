@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roam/presentation/widgets/custom_button.dart';
 import 'package:roam/presentation/widgets/interest_card.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/values/values.dart';
@@ -69,7 +70,17 @@ class SelectInterestScreen extends StatelessWidget {
             spacing: Sizes.SIZE_16,
             runSpacing: Sizes.SIZE_16,
             children: _buildInterests(items),
-          )
+          ),
+          SpaceH24(),
+          CustomButton(
+            onPressed: () {},
+            height: Sizes.HEIGHT_56,
+            title: StringConst.NEXT,
+            borderRadius: Sizes.RADIUS_8,
+            textStyle: theme.textTheme.subtitle1.copyWith(
+              color: AppColors.white,
+            ),
+          ),
         ],
       ),
     );

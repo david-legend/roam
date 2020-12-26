@@ -27,6 +27,7 @@ class StringConst {
   static const String KRISTIN = "Kristin ";
   static const String INTEREST = "what do you love most about travelling?";
   static const String SELECT_5 = "Select 5 or more ";
+  static const String NEXT = "Next";
 
   //Interests
   static const String ADVENTURE = "Adventure";
