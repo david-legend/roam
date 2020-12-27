@@ -47,4 +47,16 @@ class ImagePath {
   static const String ELEPHANT = "$imageDir/elephant.svg";
   static const String MEAL = "$imageDir/meal.svg";
   static const String LIMA = "$imageDir/lima_city.png";
+  static const String HOI_ANN = "$imageDir/hoi_ann.png";
+  static const String CAR_TRIPS = "$imageDir/car_trips.png";
+
+  static const String CHAN = "$imageDir/chan.png";
+  static const String LEE = "$imageDir/lee.png";
+  static const String MONICA = "$imageDir/monica.png";
+  static const String TAYLOR = "$imageDir/taylor.png";
+
+  static const String PERU = "$imageDir/peru_beach.png";
+  static const String TOKYO = "$imageDir/tokyo.png";
+  static const String VIETNAM = "$imageDir/vietnam.png";
+  static const String PARIS = "$imageDir/paris.png";
 }

@@ -7,6 +7,7 @@ import 'package:roam/presentation/widgets/custom_button_2.dart';
 import 'package:roam/presentation/widgets/custom_text_field.dart';
 import 'package:roam/presentation/widgets/custom_text_form_field.dart';
 import 'package:roam/presentation/widgets/discover_card.dart';
+import 'package:roam/presentation/widgets/place_card.dart';
 import 'package:roam/presentation/widgets/section_heading.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/presentation/widgets/trending_card.dart';
@@ -43,84 +44,28 @@ class TrendingCardItem {
   final double rating;
 }
 
+class PlaceCardItem {
+  PlaceCardItem({
+    @required this.title,
+    @required this.subtitle,
+    @required this.content,
+    this.imagePath,
+    this.rating,
+  });
+
+  final String title;
+  final String subtitle;
+  final String content;
+  final String imagePath;
+  final double rating;
+}
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<DiscoverCardItem> items = [
-    DiscoverCardItem(
-      title: StringConst.ANIMALS,
-      icon: ImagePath.ELEPHANT,
-      backgroundColor: AppColors.lightGreen70,
-      color: AppColors.darkGreen,
-    ),
-    DiscoverCardItem(
-      title: StringConst.ADVENTURE,
-      icon: ImagePath.CAR,
-      backgroundColor: AppColors.purple10,
-      color: AppColors.purple,
-    ),
-    DiscoverCardItem(
-      title: StringConst.MEALS,
-      icon: ImagePath.MEAL,
-      backgroundColor: AppColors.yellow10,
-      color: AppColors.deepYellow,
-    ),
-    DiscoverCardItem(
-      title: StringConst.ANIMALS,
-      icon: ImagePath.ELEPHANT,
-      backgroundColor: AppColors.lightGreen70,
-      color: AppColors.darkGreen,
-    ),
-    DiscoverCardItem(
-      title: StringConst.ADVENTURE,
-      icon: ImagePath.CAR,
-      backgroundColor: AppColors.purple10,
-      color: AppColors.purple,
-    ),
-    DiscoverCardItem(
-      title: StringConst.MEALS,
-      icon: ImagePath.MEAL,
-      backgroundColor: AppColors.yellow10,
-      color: AppColors.deepYellow,
-    ),
-  ];
-
-  List<TrendingCardItem> trendingItems = [
-    TrendingCardItem(
-      title: StringConst.LIMA_CITY,
-      subtitle: StringConst.PERU,
-      rating: 4.4,
-      imagePath: ImagePath.LIMA,
-    ),
-    TrendingCardItem(
-      title: StringConst.BALI,
-      subtitle: StringConst.INDONESIA,
-      rating: 4.5,
-      imagePath: ImagePath.LIMA,
-    ),
-    TrendingCardItem(
-      title: StringConst.RHODES,
-      subtitle: StringConst.GREECE,
-      rating: 4.4,
-      imagePath: ImagePath.LIMA,
-    ),
-    TrendingCardItem(
-      title: StringConst.HALONG_BAY,
-      subtitle: StringConst.VIETNAM,
-      rating: 4.3,
-      imagePath: ImagePath.LIMA,
-    ),
-    TrendingCardItem(
-      title: StringConst.VATICAN_CITY,
-      subtitle: StringConst.ITALY,
-      rating: 4.5,
-      imagePath: ImagePath.LIMA,
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
@@ -155,14 +100,15 @@ class _HomeScreenState extends State<HomeScreen> {
             height: assignHeight(context: context, fraction: 0.125),
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemCount: items.length,
+              itemCount: Data.discoverCardItems.length,
               itemBuilder: (BuildContext context, int index) {
                 return DiscoverCard(
-                  title: items[index].title,
-                  backgroundColor: items[index].backgroundColor,
-                  color: items[index].color,
+                  title: Data.discoverCardItems[index].title,
+                  backgroundColor:
+                      Data.discoverCardItems[index].backgroundColor,
+                  color: Data.discoverCardItems[index].color,
                   child: SvgPicture.asset(
-                    items[index].icon,
+                    Data.discoverCardItems[index].icon,
                   ),
                 );
               },
@@ -181,14 +127,40 @@ class _HomeScreenState extends State<HomeScreen> {
             height: assignHeight(context: context, fraction: 0.3),
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemCount: trendingItems.length,
+              itemCount: Data.trendingItems.length,
               padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_8),
               itemBuilder: (BuildContext context, int index) {
                 return TrendingCard(
-                  title: trendingItems[index].title,
-                  subtitle: trendingItems[index].subtitle,
-                  imagePath: trendingItems[index].imagePath,
-                  rating: trendingItems[index].rating,
+                  title: Data.trendingItems[index].title,
+                  subtitle: Data.trendingItems[index].subtitle,
+                  imagePath: Data.trendingItems[index].imagePath,
+                  rating: Data.trendingItems[index].rating,
+                );
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return SpaceW16();
+              },
+            ),
+          ),
+          SpaceH24(),
+          SectionHeading(
+            title1: StringConst.FOR_YOU,
+            title2: StringConst.SEE_ALL,
+          ),
+          SpaceH12(),
+          Container(
+            height: assignHeight(context: context, fraction: 0.35),
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemCount: Data.placeCardItems.length,
+              padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_8),
+              itemBuilder: (BuildContext context, int index) {
+                return PlaceCard(
+                  title: Data.placeCardItems[index].title,
+                  subtitle: Data.placeCardItems[index].subtitle,
+                  content: Data.placeCardItems[index].content,
+                  imagePath: Data.placeCardItems[index].imagePath,
+                  rating: Data.placeCardItems[index].rating,
                 );
               },
               separatorBuilder: (BuildContext context, int index) {

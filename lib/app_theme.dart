@@ -81,7 +81,7 @@ class AppTheme {
     ),
     headline6: GoogleFonts.poppins(
       fontSize: Sizes.TEXT_SIZE_20,
-      color: AppColors.primaryText,
+      color: AppColors.black50,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),

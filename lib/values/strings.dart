@@ -63,6 +63,7 @@ class StringConst {
   static const String DISCOVER = "Discover";
   static const String SEE_ALL = "See all";
   static const String TRENDING_SIGHTS = "Trending Sights";
+  static const String FOR_YOU = "For You";
   static const String MOST_VISITED = "Most Visited";
   static const String LIMA_CITY = "Lima City";
   static const String PERU = "Peru";
@@ -74,6 +75,34 @@ class StringConst {
   static const String GREECE = "Greece";
   static const String BALI = "Regis, Bali";
   static const String INDONESIA = "Indonesia";
+
+  static const String VERNICE = "Vernice";
+  static const String HOI_ANN = "Hoi Ann";
+  static const String VARANASI = "Varanasi";
+  static const String BARRANCO = "Barranco";
+  static const String MYKONO = "Mykono";
+  static const String INDIA = "India";
+
+  static const String CONTENT_RATING_1 = "2456 ratings";
+  static const String CONTENT_RATING_2 = "5201 ratings";
+  static const String CONTENT_RATING_3 = "1321 ratings";
+  static const String CONTENT_RATING_4 = "459 ratings";
+  static const String CONTENT_RATING_5 = "987 ratings";
+
+  //DiscoverScreen
+  static const String MY_TRIPS = "My Trips";
+  static const String TRIP_COLLABORATORS = "Trip Collaborators";
+  static const String TRIP_SUMMARY =
+      "A vacation trip with friends to Bali Indonesia ro see the resorts, beaches etc.";
+  static const String OLD_TRIP = "Old Trips";
+  static const String PERU_BEACH = "Peru Beaches '19";
+  static const String TOKYO = "Tokyo '15";
+  static const String VIETNAM_19 = "Love Vietnam '19";
+  static const String PARIS_FUN = "Parin Fun '17";
+
+  static const String DURATION_1 = "3 months ago";
+  static const String DURATION_2 = "6 months ago";
+  static const String NEW_TRIP = "New Trip";
 
   //hint_text
   static const String FULL_NAME = "Full Name";
