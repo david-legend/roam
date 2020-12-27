@@ -56,6 +56,25 @@ class StringConst {
   static const String URBAN = "Urban";
   static const String WILDLIFE = "Wildlife";
 
+  //HomeScreen
+  static const String TRAVEL = "Travel the world in grand style";
+  static const String ANIMALS = "Animals";
+  static const String MEALS = "Meals";
+  static const String DISCOVER = "Discover";
+  static const String SEE_ALL = "See all";
+  static const String TRENDING_SIGHTS = "Trending Sights";
+  static const String MOST_VISITED = "Most Visited";
+  static const String LIMA_CITY = "Lima City";
+  static const String PERU = "Peru";
+  static const String HALONG_BAY = "Halong Bay";
+  static const String VIETNAM = "Vietnam";
+  static const String VATICAN_CITY = "Vatican City";
+  static const String ITALY = "Italy";
+  static const String RHODES = "Rhodes";
+  static const String GREECE = "Greece";
+  static const String BALI = "Regis, Bali";
+  static const String INDONESIA = "Indonesia";
+
   //hint_text
   static const String FULL_NAME = "Full Name";
   static const String PASSWORD = "Password";
@@ -65,6 +84,7 @@ class StringConst {
   static const String FULL_NAME_HINT_TEXT = "Eleanor Pena";
   static const String PASSWORD_HINT_TEXT = "********";
   static const String EMAIL_HINT_TEXT = "example@gmail.com";
+  static const String SEARCH_HINT_TEXT = "Search for countries, places etc";
 
   static const String FACEBOOK = "Facebook";
   static const String GOOGLE = "Google";

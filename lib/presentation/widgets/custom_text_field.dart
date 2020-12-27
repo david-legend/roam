@@ -3,7 +3,6 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:roam/values/values.dart';
 
 class CustomTextField extends StatelessWidget {
-  TextEditingController controller;
   final TextStyle textFormFieldStyle;
   final TextStyle hintTextStyle;
   final TextStyle fieldTitleTextStyle;
@@ -23,10 +22,10 @@ class CustomTextField extends StatelessWidget {
   final bool obscured;
   final bool hasTitle;
   final bool hasIcon;
+  final int maxLines;
 
   CustomTextField({
     this.prefixIconImagePath,
-    this.controller,
     this.textFormFieldStyle,
     this.fieldTitleTextStyle,
     this.hintTextStyle,
@@ -37,6 +36,7 @@ class CustomTextField extends StatelessWidget {
     this.contentPaddingVertical = Sizes.SIZE_16,
     this.prefixIconMarginHorizontal = Sizes.SIZE_16,
     this.hintText,
+    this.maxLines = 1,
     this.prefixIconColor = AppColors.primaryColor,
     this.fillColor = AppColors.white,
     this.filled = true,
@@ -55,8 +55,8 @@ class CustomTextField extends StatelessWidget {
         children: <Widget>[
           hasTitle ? formFieldTitle(fieldTitle: fieldTitle) : Container(),
           TextFormField(
-            controller: controller,
             style: textFormFieldStyle,
+            maxLines: maxLines,
             decoration: InputDecoration(
               prefixIcon: hasIcon
                   ? Container(

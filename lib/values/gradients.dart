@@ -24,4 +24,17 @@ class Gradients {
       Color.fromARGB(20, 45, 45, 45),
     ],
   );
+
+  static const Gradient discoverCardOverlayGradient = LinearGradient(
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+    stops: [
+      0,
+      1,
+    ],
+    colors: [
+      Color.fromRGBO(27, 87, 85, 0.4),
+      Color.fromRGBO(27, 87, 85, 0.4),
+    ],
+  );
 }

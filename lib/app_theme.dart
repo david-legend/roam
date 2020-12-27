@@ -32,7 +32,7 @@ class AppTheme {
     secondaryVariant: AppColors.accentColor,
     background: Colors.white,
     surface: Color(0xFFFAFBFB),
-    onBackground: Colors.white,
+    onBackground: AppColors.white100,
     error: _lightFillColor,
     onError: _lightFillColor,
     onPrimary: _lightFillColor,
