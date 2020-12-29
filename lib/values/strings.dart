@@ -112,6 +112,30 @@ class StringConst {
   static const String STONE_HENGE = "Stonehenge, England";
   static const String NIAGARA_FALLS = "Niagara Falls, Canada";
   static const String BLACK_LAGOON = "The Black Lagoon, Iceland";
+  static const String ATTRACTIONS = "Attractions";
+  static const String HOTELS = "Hotel";
+  static const String RECOMMENDED = "Recommended";
+
+  //PlaceScreen
+  static const String TEMPERATURE = "26";
+  static const String CELSIUS = "°C";
+  static const String MORE_OF = "More of";
+  static const String PLACES_TO_EXPLORE = "Places to Explore";
+  static const String EXPERIENCES = "Attractions & Experiences";
+  static const String PHOTOGRAPHY_TAG = "Photography";
+  static const String LUXURY_TAG = "Luxury";
+  static const String NATURE_TAG = "Nature";
+  static const String BREAKFAST_PLACES = "Places for breakfast";
+  static const String BEACHES = "Beaches";
+  static const String RESORTS = "Resorts in Bali";
+  static const String TANAH = "Tanah Lot";
+  static const String TANAH_TEXT = "Island Templs with water views";
+  static const String SACRED_MONKEY = "Sacred Monkey Sanctuary";
+  static const String SACRED_MONKEY_TEXT = "Temple Complex with many monkeys";
+  static const String GILI_ISLAND = "Gili Island";
+  static const String GILI_ISLAND_TEXT = "Three tiny Island near sandy beaches";
+  static const String SEE_MORE = "Want to see more?";
+  static const String LETS_GO = "Let's go to ";
 
   //hint_text
   static const String FULL_NAME = "Full Name";

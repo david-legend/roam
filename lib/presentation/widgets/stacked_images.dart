@@ -14,6 +14,9 @@ class StackedImages extends StatelessWidget {
     this.widthOfImageItem = kWidth,
     this.heightOfImageItem = kHeight,
     this.offset = kOffset,
+    this.color = AppColors.secondaryColor,
+    this.textColor = AppColors.white,
+    this.textSize,
     this.borderRadius = const BorderRadius.all(
       const Radius.circular(
         Sizes.RADIUS_20,
@@ -29,6 +32,9 @@ class StackedImages extends StatelessWidget {
   final double widthOfImageItem;
   final double heightOfImageItem;
   final double offset;
+  final Color color;
+  final Color textColor;
+  final double textSize;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +59,7 @@ class StackedImages extends StatelessWidget {
           margin: EdgeInsets.only(left: (offset * index)),
           decoration: BoxDecoration(
             border: Border.all(
-              color: AppColors.secondaryColor,
+              color: color,
               width: Sizes.WIDTH_2,
             ),
             borderRadius: borderRadius,
@@ -78,18 +84,19 @@ class StackedImages extends StatelessWidget {
               height: heightOfImageItem,
               margin: EdgeInsets.only(left: (offset * items.length)),
               decoration: BoxDecoration(
-                color: AppColors.secondaryColor,
+                color: color,
                 borderRadius: borderRadius,
               ),
               child: Center(
                 child: Text(
                   "+$extraImagesLength",
                   overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.bodyText2.copyWith(
-                    color: AppColors.white,
-                    fontSize: "+$extraImagesLength".length >= 4
-                        ? Sizes.TEXT_SIZE_8
-                        : Sizes.TEXT_SIZE_10,
+                  style: theme.textTheme.subtitle1.copyWith(
+                    color: textColor,
+                    fontSize: (textSize) ??
+                        ("+$extraImagesLength".length >= 4
+                            ? Sizes.TEXT_SIZE_8
+                            : Sizes.TEXT_SIZE_10),
                   ),
                 ),
               ),

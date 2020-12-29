@@ -158,10 +158,33 @@ class AppRouter extends RouterBase {
       );
     },
     PlaceScreen: (data) {
+      final args = data.getArgs<PlaceScreenArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
-        builder: (context) => PlaceScreen(),
+        builder: (context) => PlaceScreen(
+          place: args.place,
+          location: args.location,
+          imagePath: args.imagePath,
+          rating: args.rating,
+        ),
         settings: data,
       );
     },
   };
+}
+
+/// ************************************************************************
+/// Arguments holder classes
+/// *************************************************************************
+
+/// PlaceScreen arguments holder class
+class PlaceScreenArguments {
+  final String place;
+  final String location;
+  final String imagePath;
+  final double rating;
+  PlaceScreenArguments(
+      {@required this.place,
+      @required this.location,
+      @required this.imagePath,
+      @required this.rating});
 }

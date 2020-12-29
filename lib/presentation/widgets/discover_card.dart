@@ -17,6 +17,7 @@ class DiscoverCard extends StatelessWidget {
     this.borderRadius = const BorderRadius.all(
       const Radius.circular(Sizes.RADIUS_12),
     ),
+    this.onTap,
     this.child,
   });
 
@@ -30,6 +31,7 @@ class DiscoverCard extends StatelessWidget {
   final double height;
   final double width;
   final BorderRadiusGeometry borderRadius;
+  final GestureTapCallback onTap;
   final Widget child;
 
   @override
@@ -37,24 +39,27 @@ class DiscoverCard extends StatelessWidget {
     ThemeData theme = Theme.of(context);
     double widthOfCard = assignWidth(context: context, fraction: 0.3);
     double heightOfCard = assignHeight(context: context, fraction: 0.125);
-    return Container(
-      width: width ?? widthOfCard,
-      height: height ?? heightOfCard,
-      decoration:
-          BoxDecoration(color: backgroundColor, borderRadius: borderRadius),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          hasIcon ? Icon(icon, size: iconSize, color: color) : child,
-          SpaceH8(),
-          Text(
-            title,
-            style: titleStyle ??
-                theme.textTheme.subtitle2.copyWith(
-                  color: color,
-                ),
-          ),
-        ],
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: width ?? widthOfCard,
+        height: height ?? heightOfCard,
+        decoration:
+            BoxDecoration(color: backgroundColor, borderRadius: borderRadius),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            hasIcon ? Icon(icon, size: iconSize, color: color) : child,
+            SpaceH8(),
+            Text(
+              title,
+              style: titleStyle ??
+                  theme.textTheme.subtitle2.copyWith(
+                    color: color,
+                  ),
+            ),
+          ],
+        ),
       ),
     );
   }

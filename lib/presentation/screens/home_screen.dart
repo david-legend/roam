@@ -1,10 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/custom_appbar.dart';
 import 'package:roam/presentation/widgets/custom_button_2.dart';
-import 'package:roam/presentation/widgets/custom_text_field.dart';
 import 'package:roam/presentation/widgets/custom_text_form_field.dart';
 import 'package:roam/presentation/widgets/discover_card.dart';
 import 'package:roam/presentation/widgets/place_card.dart';
@@ -12,6 +12,7 @@ import 'package:roam/presentation/widgets/search_input.dart';
 import 'package:roam/presentation/widgets/section_heading.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/presentation/widgets/trending_card.dart';
+import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
 
 const double kSidePadding = Sizes.PADDING_24;
@@ -110,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: SvgPicture.asset(
                     Data.discoverCardItems[index].icon,
                   ),
+                  onTap: () {},
                 );
               },
               separatorBuilder: (BuildContext context, int index) {
@@ -135,6 +137,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   subtitle: Data.trendingItems[index].subtitle,
                   imagePath: Data.trendingItems[index].imagePath,
                   rating: Data.trendingItems[index].rating,
+                  onTap: () {
+                    ExtendedNavigator.root.push(
+                      Routes.placeScreen,
+                      arguments: PlaceScreenArguments(
+                        place: Data.trendingItems[index].title,
+                        location: Data.trendingItems[index].subtitle,
+                        imagePath: Data.trendingItems[index].imagePath,
+                        rating: Data.trendingItems[index].rating,
+                      ),
+                    );
+                  },
                 );
               },
               separatorBuilder: (BuildContext context, int index) {

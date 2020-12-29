@@ -177,4 +177,100 @@ class Data {
       likes: 190,
     ),
   ];
+
+  static List<TagItem> tagItems1 = [
+    TagItem(
+      tag: StringConst.PHOTOGRAPHY_TAG,
+      textColor: AppColors.secondaryColor,
+      backgroundColor: AppColors.lightGreen50,
+    ),
+    TagItem(
+      tag: StringConst.NATURE_TAG,
+      textColor: AppColors.pink,
+      backgroundColor: AppColors.pink10,
+    ),
+    TagItem(
+      tag: StringConst.LUXURY_TAG,
+      textColor: AppColors.yellow,
+      backgroundColor: AppColors.yellow10,
+    ),
+  ];
+
+  static List<TagItem> tagItems2 = [
+    TagItem(
+      tag: StringConst.PHOTOGRAPHY_TAG,
+      textColor: AppColors.secondaryColor,
+      backgroundColor: AppColors.lightGreen50,
+    ),
+    TagItem(
+      tag: StringConst.NATURE_TAG,
+      textColor: AppColors.pink,
+      backgroundColor: AppColors.pink10,
+    ),
+  ];
+
+  static const List<String> moreImages = [
+    ImagePath.MORE_1,
+    ImagePath.MORE_2,
+    ImagePath.MORE_3,
+    ImagePath.BLACK_LAGOON,
+    ImagePath.MORE_1,
+  ];
+
+  static const List<String> defaultTags = [
+    StringConst.PHOTOGRAPHY_TAG,
+    StringConst.NATURE_TAG,
+    StringConst.LUXURY_TAG,
+  ];
+
+  static const List<Color> defaultTagColors = [
+    AppColors.lightGreen50,
+    AppColors.pink10,
+    AppColors.yellow10,
+  ];
+
+  static List<ExploreCardItem> exploreCardItems = [
+    ExploreCardItem(
+      title: StringConst.BREAKFAST_PLACES,
+      content: StringConst.CONTENT_RATING_1,
+      imagePath: ImagePath.MORE_1,
+      tags: tagItems1,
+      rating: 4.0,
+    ),
+    ExploreCardItem(
+      title: StringConst.BEACHES,
+      content: StringConst.CONTENT_RATING_3,
+      imagePath: ImagePath.MORE_2,
+      tags: tagItems2,
+      rating: 5.0,
+    ),
+    ExploreCardItem(
+      title: StringConst.RESORTS,
+      content: StringConst.CONTENT_RATING_4,
+      imagePath: ImagePath.MORE_3,
+      tags: tagItems1,
+      rating: 3.5,
+    ),
+  ];
+
+  static List<AttractionCardItem> attractionCardItems = [
+    AttractionCardItem(
+      title: StringConst.TANAH,
+      content: StringConst.TANAH_TEXT,
+      imagePath: ImagePath.TANAH,
+      rating: 4.6,
+    ),
+    AttractionCardItem(
+      title: StringConst.SACRED_MONKEY,
+      content: StringConst.SACRED_MONKEY_TEXT,
+      imagePath: ImagePath.SACRED_MONKEY,
+      rating: 4.4,
+    ),
+    AttractionCardItem(
+      title: StringConst.GILI_ISLAND,
+      content: StringConst.GILI_ISLAND_TEXT,
+      imagePath: ImagePath.GILI_ISLAND,
+      rating: 4.3,
+    ),
+  ];
 }

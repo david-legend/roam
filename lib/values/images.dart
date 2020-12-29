@@ -65,4 +65,16 @@ class ImagePath {
   static const String GREAT_WALL = "$imageDir/great_wall.png";
   static const String NIAGARA_FALLS = "$imageDir/niagara_falls.png";
   static const String STONE_HENGE = "$imageDir/stone_henge.png";
+
+  static const String CLOUD = "$imageDir/cloud.svg";
+
+  static const String MORE_1 = "$imageDir/more_1.png";
+  static const String MORE_2 = "$imageDir/more_2.png";
+  static const String MORE_3 = "$imageDir/more_3.png";
+  static const String MORE_4 = "$imageDir/more_4.png";
+  static const String MORE_5 = "$imageDir/more_5.png";
+
+  static const String TANAH = "$imageDir/tanah.png";
+  static const String SACRED_MONKEY = "$imageDir/sacred_monkey.png";
+  static const String GILI_ISLAND = "$imageDir/gili_island.png";
 }

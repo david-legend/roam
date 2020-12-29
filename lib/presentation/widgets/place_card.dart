@@ -101,7 +101,7 @@ class PlaceCard extends StatelessWidget {
                         ignoreGestures: true,
                         direction: Axis.horizontal,
                         allowHalfRating: true,
-                        unratedColor: Colors.grey[300],
+                        unratedColor: AppColors.grey50,
                         itemBuilder: (context, _) => Icon(
                           Icons.star,
                           color: AppColors.yellow,

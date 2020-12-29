@@ -5,6 +5,7 @@ class CustomButton2 extends StatelessWidget {
   CustomButton2({
     this.onPressed,
     this.height = Sizes.HEIGHT_56,
+//    this.width = Sizes.HEIGHT_56,
     this.elevation = Sizes.ELEVATION_1,
     this.borderRadius = Sizes.RADIUS_24,
     this.color = AppColors.accentColor,
@@ -16,6 +17,7 @@ class CustomButton2 extends StatelessWidget {
 
   final VoidCallback onPressed;
   final double height;
+//  final double width;
   final double elevation;
   final double borderRadius;
   final Color color;

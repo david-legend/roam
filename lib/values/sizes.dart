@@ -113,6 +113,7 @@ class Sizes {
   static const double WIDTH_56 = 56.0;
   static const double WIDTH_50 = 50.0;
   static const double WIDTH_40 = 40.0;
+  static const double WIDTH_36 = 36.0;
   static const double WIDTH_32 = 32.0;
   static const double WIDTH_30 = 30.0;
   static const double WIDTH_25 = 25.0;

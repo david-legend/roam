@@ -46,6 +46,7 @@ dev_dependencies:
   dots_indicator: ^1.2.0
   animations: ^1.1.2
   flutter_rating_bar: ^3.2.0+1
+  easy_rich_text: ^0.5.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

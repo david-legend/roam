@@ -47,13 +47,13 @@ class SavedPlacesScreen extends StatelessWidget {
                 indicatorSize: TabBarIndicatorSize.label,
                 tabs: [
                   Tab(
-                    text: "Attractions",
+                    text: StringConst.ATTRACTIONS,
                   ),
                   Tab(
-                    text: "Hotels",
+                    text: StringConst.HOTELS,
                   ),
                   Tab(
-                    text: "Recommended",
+                    text: StringConst.RECOMMENDED,
                   ),
                 ],
               ),

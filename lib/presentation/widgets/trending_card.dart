@@ -12,6 +12,7 @@ class TrendingCard extends StatelessWidget {
     this.imagePath,
     this.title,
     this.subtitle,
+    this.onTap,
     this.icon = Icons.location_pin,
     this.rating = 0,
     this.borderRadius = const BorderRadius.all(
@@ -28,6 +29,7 @@ class TrendingCard extends StatelessWidget {
   final String subtitle;
   final IconData icon;
   final double rating;
+  final GestureTapCallback onTap;
   final BorderRadiusGeometry borderRadius;
 
   @override
@@ -35,26 +37,29 @@ class TrendingCard extends StatelessWidget {
     double widthOfCard = assignWidth(context: context, fraction: 0.45);
     double heightOfCard = assignHeight(context: context, fraction: 0.3);
 
-    return Container(
-      width: width ?? widthOfCard,
-      height: height ?? heightOfCard,
-      decoration: BoxDecoration(
-        boxShadow: [Shadows.containerShadow],
-        borderRadius: borderRadius,
-      ),
-      child: Stack(
-        children: [
-          _buildBackgroundImage(
-            widthOfCard: widthOfCard,
-            heightOfCard: heightOfCard,
-          ),
-          _buildRating(context: context, widthOfCard: widthOfCard),
-          _buildLocation(
-            context: context,
-            widthOfCard: widthOfCard,
-            heightOfCard: heightOfCard,
-          ),
-        ],
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: width ?? widthOfCard,
+        height: height ?? heightOfCard,
+        decoration: BoxDecoration(
+          boxShadow: [Shadows.containerShadow],
+          borderRadius: borderRadius,
+        ),
+        child: Stack(
+          children: [
+            _buildBackgroundImage(
+              widthOfCard: widthOfCard,
+              heightOfCard: heightOfCard,
+            ),
+            _buildRating(context: context, widthOfCard: widthOfCard),
+            _buildLocation(
+              context: context,
+              widthOfCard: widthOfCard,
+              heightOfCard: heightOfCard,
+            ),
+          ],
+        ),
       ),
     );
   }

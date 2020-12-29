@@ -34,6 +34,7 @@ class OldTripCard extends StatelessWidget {
         Sizes.RADIUS_8,
       ),
     ),
+    this.elevation = Sizes.ELEVATION_2,
   });
 
   final double width;
@@ -44,6 +45,7 @@ class OldTripCard extends StatelessWidget {
   final BorderRadiusGeometry borderRadius;
   final bool hasCollaborators;
   final int collaborators;
+  final double elevation;
   final List<String> images;
 
   @override
@@ -58,7 +60,7 @@ class OldTripCard extends StatelessWidget {
       height: (height ?? heightOfCard),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: borderRadius),
-        elevation: 2.0,
+        elevation: elevation,
         child: Container(
           padding: EdgeInsets.all(kPadding),
           child: Row(
