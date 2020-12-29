@@ -144,4 +144,37 @@ class Data {
       collaborators: 6,
     ),
   ];
+
+  static List<SavedPlaceItem> savedPlacesItems = [
+    SavedPlaceItem(
+      title: StringConst.GREAT_WALL,
+      subtitle: StringConst.LOREM_IPSUM_1,
+      imagePath: ImagePath.GREAT_WALL,
+      likes: 737,
+    ),
+    SavedPlaceItem(
+      title: StringConst.EIFFEL_TOWER,
+      subtitle: StringConst.LOREM_IPSUM_1,
+      imagePath: ImagePath.EIFFEL_TOWER,
+      likes: 472,
+    ),
+    SavedPlaceItem(
+      title: StringConst.STONE_HENGE,
+      subtitle: StringConst.LOREM_IPSUM_1,
+      imagePath: ImagePath.STONE_HENGE,
+      likes: 129,
+    ),
+    SavedPlaceItem(
+      title: StringConst.NIAGARA_FALLS,
+      subtitle: StringConst.LOREM_IPSUM_1,
+      imagePath: ImagePath.NIAGARA_FALLS,
+      likes: 886,
+    ),
+    SavedPlaceItem(
+      title: StringConst.BLACK_LAGOON,
+      subtitle: StringConst.LOREM_IPSUM_1,
+      imagePath: ImagePath.BLACK_LAGOON,
+      likes: 190,
+    ),
+  ];
 }

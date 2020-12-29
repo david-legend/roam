@@ -104,6 +104,15 @@ class StringConst {
   static const String DURATION_2 = "6 months ago";
   static const String NEW_TRIP = "New Trip";
 
+  //SavedPlaces Screen
+  static const String SAVED_PLACES = "Saved Places";
+  static const String PEOPLE_LIKED_THIS = "people liked this";
+  static const String GREAT_WALL = "The Great Wall, China";
+  static const String EIFFEL_TOWER = "Eiffel Tower";
+  static const String STONE_HENGE = "Stonehenge, England";
+  static const String NIAGARA_FALLS = "Niagara Falls, Canada";
+  static const String BLACK_LAGOON = "The Black Lagoon, Iceland";
+
   //hint_text
   static const String FULL_NAME = "Full Name";
   static const String PASSWORD = "Password";

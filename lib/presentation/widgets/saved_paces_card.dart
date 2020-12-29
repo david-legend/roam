@@ -1,34 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/empty.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/presentation/widgets/stacked_images.dart';
 import 'package:roam/values/values.dart';
 
-class OldTripItem {
-  OldTripItem({
+class SavedPlaceItem {
+  SavedPlaceItem({
     @required this.title,
     @required this.subtitle,
     @required this.imagePath,
-    this.collaborators,
+    this.likes,
   });
 
   final String title;
   final String subtitle;
   final String imagePath;
-  final int collaborators;
+  final int likes;
 }
 
-class OldTripCard extends StatelessWidget {
-  OldTripCard({
+class SavedPlacesCard extends StatelessWidget {
+  SavedPlacesCard({
     this.width,
     this.height,
     this.imagePath,
     this.title,
     this.subtitle,
     this.images,
-    this.hasCollaborators = true,
-    this.collaborators,
+    this.hasLikes = true,
+    this.likes,
     this.borderRadius = const BorderRadius.all(
       const Radius.circular(
         Sizes.RADIUS_8,
@@ -42,15 +43,15 @@ class OldTripCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final BorderRadiusGeometry borderRadius;
-  final bool hasCollaborators;
-  final int collaborators;
+  final bool hasLikes;
+  final int likes;
   final List<String> images;
 
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     double widthOfCard = assignWidth(context: context, fraction: 1);
-    double heightOfCard = assignHeight(context: context, fraction: 0.18);
+    double heightOfCard = assignHeight(context: context, fraction: 0.225);
     double kPadding = Sizes.PADDING_14;
 
     return Container(
@@ -82,7 +83,7 @@ class OldTripCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.headline6,
                     ),
-                    Spacer(),
+                    SpaceH8(),
                     Text(
                       subtitle,
                       overflow: TextOverflow.ellipsis,
@@ -90,17 +91,17 @@ class OldTripCard extends StatelessWidget {
                         color: AppColors.primaryColor,
                       ),
                     ),
-                    Spacer(),
-                    hasCollaborators
+                    SpaceH8(),
+                    hasLikes
                         ? Row(
                             children: [
                               StackedImages(
                                 images: images,
-                                extraImagesLength: collaborators,
+                                extraImagesLength: likes,
                               ),
                               SpaceW4(),
                               Text(
-                                StringConst.TRIP_COLLABORATORS,
+                                StringConst.PEOPLE,
                                 overflow: TextOverflow.ellipsis,
                                 style: theme.textTheme.bodyText2.copyWith(
                                   color: AppColors.primaryColor,
@@ -110,6 +111,17 @@ class OldTripCard extends StatelessWidget {
                             ],
                           )
                         : Empty(),
+                    Spacer(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(
+                          FontAwesomeIcons.solidHeart,
+                          color: AppColors.accentColor,
+                          size: Sizes.ICON_SIZE_20,
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),

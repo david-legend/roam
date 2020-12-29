@@ -59,4 +59,10 @@ class ImagePath {
   static const String TOKYO = "$imageDir/tokyo.png";
   static const String VIETNAM = "$imageDir/vietnam.png";
   static const String PARIS = "$imageDir/paris.png";
+
+  static const String BLACK_LAGOON = "$imageDir/black_lagoon.png";
+  static const String EIFFEL_TOWER = "$imageDir/eiffel_tower.png";
+  static const String GREAT_WALL = "$imageDir/great_wall.png";
+  static const String NIAGARA_FALLS = "$imageDir/niagara_falls.png";
+  static const String STONE_HENGE = "$imageDir/stone_henge.png";
 }

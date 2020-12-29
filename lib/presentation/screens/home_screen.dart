@@ -8,6 +8,7 @@ import 'package:roam/presentation/widgets/custom_text_field.dart';
 import 'package:roam/presentation/widgets/custom_text_form_field.dart';
 import 'package:roam/presentation/widgets/discover_card.dart';
 import 'package:roam/presentation/widgets/place_card.dart';
+import 'package:roam/presentation/widgets/search_input.dart';
 import 'package:roam/presentation/widgets/section_heading.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/presentation/widgets/trending_card.dart';
@@ -69,7 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
-    double widthOfScreen = assignWidth(context: context, fraction: 1);
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(Sizes.HEIGHT_56),
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SpaceH16(),
-          _buildSearch(),
+          SearchInput(),
           SpaceH24(),
           SectionHeading(
             title1: StringConst.DISCOVER,

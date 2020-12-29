@@ -84,9 +84,12 @@ class StackedImages extends StatelessWidget {
               child: Center(
                 child: Text(
                   "+$extraImagesLength",
+                  overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.bodyText2.copyWith(
                     color: AppColors.white,
-                    fontSize: Sizes.TEXT_SIZE_10,
+                    fontSize: "+$extraImagesLength".length >= 4
+                        ? Sizes.TEXT_SIZE_8
+                        : Sizes.TEXT_SIZE_10,
                   ),
                 ),
               ),
