@@ -29,6 +29,9 @@ class StringConst {
   static const String SELECT_5 = "Select 5 or more ";
   static const String NEXT = "Next";
   static const String FINISH = "Finish";
+  static const String START_MY_TRIP = "Start my trip";
+  static const String PARTY = "Party";
+  static const String SOLO = "Solo";
 
   //Follow Friends
   static const String FOLLOW_FRIENDS =
@@ -150,6 +153,9 @@ class StringConst {
 
   //Add Collaborators Screen
   static const String ADD_COLLABORATORS = "Add Friends as Contributors";
+  static const String TRIP_NAME = "Trip name";
+  static const String DATE = "Date";
+  static const String TRAVEL_WITH = "Travel with?";
 
   //hint_text
   static const String FULL_NAME = "Full Name";
@@ -162,6 +168,8 @@ class StringConst {
   static const String EMAIL_HINT_TEXT = "example@gmail.com";
   static const String SEARCH_HINT_TEXT = "Search for countries, places etc";
   static const String SEARCH_HINT_TEXT_2 = "Search for friends";
+  static const String TRIP_HINT_TEXT = "Bali Adventure 2021";
+  static const String DATE_HINT_TEXT = "09 Jan - 26 Jan";
 
   static const String FACEBOOK = "Facebook";
   static const String GOOGLE = "Google";

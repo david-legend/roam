@@ -95,4 +95,5 @@ class ImagePath {
   static const String FISHER = "$imageDir/fisher.png";
   static const String HOWARD = "$imageDir/howard.png";
   static const String JEROME = "$imageDir/jerome.png";
+  static const String HOLIDAY = "$imageDir/holiday.png";
 }

@@ -5,6 +5,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:roam/presentation/screens/discover_screen.dart';
+import 'package:roam/presentation/screens/plan_trip_screen.dart';
 import 'package:roam/presentation/screens/profile_screen.dart';
 import 'package:roam/presentation/screens/saved_places_screen.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
@@ -25,7 +26,7 @@ class _RootScreenState extends State<RootScreen> {
   int _selectedIndex = 0;
   final List<Widget> pages = [
     HomeScreen(),
-    AddCollaboratorsScreen(),
+    PlanTripScreen(),
     DiscoverScreen(),
     SavedPlacesScreen(),
 //    ProfileScreen(),

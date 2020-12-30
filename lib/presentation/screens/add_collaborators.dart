@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
@@ -25,7 +26,9 @@ class AddCollaboratorsScreen extends StatelessWidget {
                   width: Sizes.WIDTH_50,
                   height: Sizes.HEIGHT_50,
                   child: CustomButton2(
-                    onPressed: () {},
+                    onPressed: () {
+                      ExtendedNavigator.root.pop();
+                    },
                     borderRadius: Sizes.RADIUS_12,
                     icon: Icons.arrow_back_ios,
                     iconColor: AppColors.white,
