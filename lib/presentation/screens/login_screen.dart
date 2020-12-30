@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
-import 'package:roam/presentation/widgets/custom_text_field.dart';
+import 'package:roam/presentation/widgets/custom_text_form_field.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
@@ -14,10 +14,19 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Stack(
+        child: ListView(
+          shrinkWrap: true,
+          padding: EdgeInsets.zero,
           children: [
-            SvgPicture.asset(ImagePath.LIGHT_ELLIPSE, fit: BoxFit.cover),
-            _socialLogin(context),
+            Stack(
+              children: [
+                SvgPicture.asset(ImagePath.LIGHT_ELLIPSE, fit: BoxFit.cover),
+                Container(
+                  height: assignHeight(context: context, fraction: 1.0),
+                  child: _socialLogin(context),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -29,6 +38,9 @@ class LoginScreen extends StatelessWidget {
     double width = assignWidth(context: context, fraction: 1.0);
     TextStyle hintTextStyle = theme.textTheme.bodyText2;
     TextStyle titleTextStyle = theme.textTheme.subtitle1;
+    TextStyle formTextStyle = theme.textTheme.subtitle2.copyWith(
+      color: AppColors.black50,
+    );
     return Column(
       children: [
         Spacer(),
@@ -81,25 +93,34 @@ class LoginScreen extends StatelessWidget {
         SpaceH20(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_24),
-          child: CustomTextField(
+          child: CustomTextFormField(
             hasTitle: true,
             fieldTitle: StringConst.EMAIL,
             fieldTitleTextStyle: titleTextStyle,
+            textFormFieldStyle: formTextStyle,
             hintText: StringConst.EMAIL_HINT_TEXT,
+            prefixIconColor: AppColors.primaryColor,
             hintTextStyle: hintTextStyle,
-            fillColor: AppColors.white50,
+            filled: true,
+            fillColor: AppColors.white,
+            borderStyle: BorderStyle.solid,
           ),
         ),
         SpaceH16(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_24),
-          child: CustomTextField(
+          child: CustomTextFormField(
             hasTitle: true,
             fieldTitle: StringConst.PASSWORD,
             fieldTitleTextStyle: titleTextStyle,
+            textFormFieldStyle: formTextStyle,
             hintText: StringConst.PASSWORD_HINT_TEXT,
+            prefixIconColor: AppColors.primaryColor,
             hintTextStyle: hintTextStyle,
-            fillColor: AppColors.white50,
+            filled: true,
+            fillColor: AppColors.white,
+            obscured: true,
+            borderStyle: BorderStyle.solid,
           ),
         ),
         SpaceH8(),

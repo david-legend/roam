@@ -66,6 +66,7 @@ class CustomTextFormField extends StatelessWidget {
     );
     return Container(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           hasTitle
               ? formFieldTitle(
