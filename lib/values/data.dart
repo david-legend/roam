@@ -279,11 +279,13 @@ class Data {
       title: StringConst.THAILAND,
       imagePath: ImagePath.THAILAND,
       width: 0.4,
+      spacing: 8,
     ),
     AlbumCoverItem(
       title: StringConst.INDONESIA,
       imagePath: ImagePath.INDONESIA,
       width: 0.6,
+      spacing: 8,
     ),
     AlbumCoverItem(
       title: StringConst.PERU,
@@ -293,11 +295,13 @@ class Data {
       title: StringConst.ITALY,
       imagePath: ImagePath.ITALY,
       width: 0.3,
+      spacing: 8,
     ),
     AlbumCoverItem(
       title: StringConst.VIETNAM,
       imagePath: ImagePath.VIETNAM_2,
       width: 0.7,
+      spacing: 8,
     ),
   ];
 

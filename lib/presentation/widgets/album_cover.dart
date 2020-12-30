@@ -9,11 +9,13 @@ class AlbumCoverItem {
     @required this.title,
     @required this.imagePath,
     this.width = 1.0,
+    this.spacing = 0.0,
   });
 
   final String title;
   final String imagePath;
   final double width;
+  final double spacing;
 }
 
 class AlbumCover extends StatelessWidget {
@@ -65,13 +67,18 @@ class AlbumCover extends StatelessWidget {
               borderRadius: borderRadius,
             ),
           ),
-          Positioned(
-            top: Sizes.SIZE_16,
-            left: (widthOfCover - horizontalPadding),
-            child: Text(
-              title,
-              style: theme.textTheme.subtitle2.copyWith(
-                color: AppColors.white,
+          Container(
+            padding: const EdgeInsets.only(
+              top: Sizes.PADDING_16,
+              right: Sizes.PADDING_16,
+            ),
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Text(
+                title,
+                style: theme.textTheme.subtitle2.copyWith(
+                  color: AppColors.white,
+                ),
               ),
             ),
           ),

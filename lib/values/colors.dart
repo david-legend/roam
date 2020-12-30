@@ -12,6 +12,7 @@ class AppColors {
 
   //Black
   static const Color black = Color(0xFF000000);
+  static const Color black20 = Color(0xFF262626);
   static const Color black50 = Color(0xFF444655);
   static const Color black10 = Color.fromRGBO(36, 61, 72, 0.7);
 
@@ -19,6 +20,7 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color white20 = Color(0xFFF2F2F2);
   static const Color white50 = Color(0xFFFAFAFA);
+  static const Color white60 = Color.fromRGBO(255, 255, 255, 0.6);
   static const Color white100 = Color(0xFFFDFDFD);
 
   //grey

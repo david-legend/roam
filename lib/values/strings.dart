@@ -144,6 +144,15 @@ class StringConst {
   //Profile Screen
   static const String PHOTO_STORIES = "My Photos & Stories";
   static const String JOURNEYS = "My Journeys";
+  static const String FOLLOWERS = "Followers";
+  static const String NO_OF_FOLLOWERS = "3.3K";
+  static const String NO_OF_FOLLOWING = "456";
+  static const String TRAVELS = "Travels";
+  static const String NO_OF_TRAVELS = "34";
+  static const String USER_NAME = "Kristin Watson";
+  static const String USER_HANDLE = "@kristinthetraveller";
+  static const String ABOUT_USER =
+      "I’m a travel enthusiast. Always on the move, capturing memoeries all over the world. Follow for a follow back.";
   static const String THAILAND = "Thailand";
   static const String SEE_JOURNEYS = "See all journeys";
   static const String SUBTITLE_1 = "Island Temples with water views";

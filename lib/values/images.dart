@@ -40,9 +40,11 @@ class ImagePath {
   static const String LESLIE = "$imageDir/leslie.png";
   static const String HOME = "$imageDir/home.svg";
   static const String SUITCASE = "$imageDir/suitcase.svg";
+  static const String KRISTIN = "$imageDir/kristin.png";
   static const String KRISTIN_SM = "$imageDir/kristin_sm.png";
   static const String MENU_ICON = "$imageDir/menu_icon.svg";
   static const String BELL = "$imageDir/bell.svg";
+  static const String NOTIFICATION = "$imageDir/notification.svg";
   static const String CAR = "$imageDir/car.svg";
   static const String ELEPHANT = "$imageDir/elephant.svg";
   static const String MEAL = "$imageDir/meal.svg";
@@ -85,9 +87,9 @@ class ImagePath {
   static const String THAILAND = "$imageDir/thailand.png";
   static const String KANCHANABURI = "$imageDir/kanchanaburi.png";
   static const String LIMA_CITY = "$imageDir/lima.png";
-  static const String BLUE_ELLIPSE = "$imageDir/blue_ellipse.png";
-  static const String SEMI_CIRCLE = "$imageDir/semi_circle.png";
-  static const String YELLOW_CIRCLE = "$imageDir/yellow_circle.png";
+  static const String BLUE_ELLIPSE = "$imageDir/blue_ellipse.svg";
+  static const String SEMI_CIRCLE = "$imageDir/semi_circle.svg";
+  static const String YELLOW_CIRCLE = "$imageDir/yellow_circle.svg";
 
   static const String HOWARD = "$imageDir/howard.png";
   static const String FISHER = "$imageDir/fisher.png";

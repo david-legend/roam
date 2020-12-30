@@ -54,7 +54,7 @@ class CustomAppBar extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(right: Sizes.PADDING_16),
           child: SvgPicture.asset(
-            ImagePath.BELL,
+            ImagePath.NOTIFICATION,
             color: trailingColor,
           ),
         ),
