@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/custom_appbar.dart';
@@ -6,6 +7,7 @@ import 'package:roam/presentation/widgets/section_heading.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/presentation/widgets/stacked_images.dart';
 import 'package:roam/presentation/widgets/trip_card.dart';
+import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
 
 const double kSidePadding = Sizes.PADDING_24;
@@ -22,7 +24,9 @@ class DiscoverScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          ExtendedNavigator.root.push(Routes.planTripScreen);
+        },
         label: Text(
           StringConst.NEW_TRIP,
           style: theme.textTheme.subtitle1.copyWith(

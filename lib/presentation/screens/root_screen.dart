@@ -26,10 +26,9 @@ class _RootScreenState extends State<RootScreen> {
   int _selectedIndex = 0;
   final List<Widget> pages = [
     HomeScreen(),
-    PlanTripScreen(),
     DiscoverScreen(),
     SavedPlacesScreen(),
-//    ProfileScreen(),
+    ProfileScreen(),
   ];
 
   @override

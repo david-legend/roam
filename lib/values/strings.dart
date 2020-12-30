@@ -54,7 +54,7 @@ class StringConst {
   static const String FOOD = "Food";
   static const String MOUNTAIN = "Mountain";
   static const String NATURE = "Nature";
-  static const String PEOPLE = "People";
+  static const String PEOPLE = "People liked this";
   static const String RESORT = "Resort";
   static const String URBAN = "Urban";
   static const String WILDLIFE = "Wildlife";

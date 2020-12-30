@@ -5,6 +5,7 @@ import 'package:roam/presentation/widgets/custom_button.dart';
 import 'package:roam/presentation/widgets/custom_button_2.dart';
 import 'package:roam/presentation/widgets/custom_text_form_field.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
+import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
 
 const double kBorderRadius = Sizes.RADIUS_8;
@@ -15,9 +16,13 @@ class PlanTripScreen extends StatelessWidget {
     ThemeData theme = Theme.of(context);
     double width = assignWidth(context: context, fraction: 1);
     double height = assignHeight(context: context, fraction: 0.4);
+    TextStyle titleStyle = theme.textTheme.subtitle1.copyWith(
+      color: AppColors.black50,
+    );
     return Scaffold(
       body: Container(
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
             Stack(
               children: [
@@ -63,12 +68,7 @@ class PlanTripScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    StringConst.TRIP_NAME,
-                    style: theme.textTheme.subtitle1.copyWith(
-                      color: AppColors.black50,
-                    ),
-                  ),
+                  Text(StringConst.TRIP_NAME, style: titleStyle),
                   SpaceH16(),
                   CustomTextFormField(
                     textFormFieldStyle: theme.textTheme.subtitle1.copyWith(
@@ -81,15 +81,10 @@ class PlanTripScreen extends StatelessWidget {
                     ),
                     filled: true,
                     fillColor: AppColors.white,
-                    borderStyle: BorderStyle.none,
+                    borderStyle: BorderStyle.solid,
                   ),
                   SpaceH16(),
-                  Text(
-                    StringConst.DATE,
-                    style: theme.textTheme.subtitle1.copyWith(
-                      color: AppColors.black50,
-                    ),
-                  ),
+                  Text(StringConst.DATE, style: titleStyle),
                   SpaceH16(),
                   CustomTextFormField(
                     textFormFieldStyle: theme.textTheme.subtitle1.copyWith(
@@ -101,17 +96,28 @@ class PlanTripScreen extends StatelessWidget {
                       color: AppColors.grey,
                     ),
                     filled: true,
+                    hasSuffixIcon: true,
+                    suffixIcon: Icon(
+                      Icons.calendar_today,
+                      color: AppColors.accentColor,
+                    ),
                     fillColor: AppColors.white,
-                    borderStyle: BorderStyle.none,
+                    borderStyle: BorderStyle.solid,
                   ),
-                  SpaceH24(),
+                  SpaceH30(),
+                  Text(StringConst.TRAVEL_WITH, style: titleStyle),
+                  SpaceH16(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         width: assignWidth(context: context, fraction: 0.3),
                         child: CustomButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            ExtendedNavigator.root
+                                .push(Routes.addCollaboratorsScreen);
+                          },
+                          height: Sizes.HEIGHT_44,
                           title: StringConst.PARTY,
                           textStyle: theme.textTheme.subtitle1.copyWith(
                             color: AppColors.white,
@@ -123,6 +129,7 @@ class PlanTripScreen extends StatelessWidget {
                         width: assignWidth(context: context, fraction: 0.3),
                         child: CustomButton(
                           onPressed: () {},
+                          height: Sizes.HEIGHT_44,
                           title: StringConst.SOLO,
                           color: AppColors.white,
                           borderSide: BorderSide(color: AppColors.grey),
