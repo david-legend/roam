@@ -152,10 +152,17 @@ class StringConst {
   static const String KANCHANABURI = "Kanchanaburi";
 
   //Add Collaborators Screen
-  static const String ADD_COLLABORATORS = "Add Friends as Contributors";
+  static const String ADD_COLLABORATORS = "Add Friends as Collaborators";
   static const String TRIP_NAME = "Trip name";
   static const String DATE = "Date";
   static const String TRAVEL_WITH = "Travel with?";
+
+  static const String HOWARD = "Esther Howard";
+  static const String FISHER = "Cody Fisher";
+  static const String COURTNEY = "Courtney Henry";
+  static const String ANNETTE = "Annette Black";
+  static const String ELEANOR = "Eleanor Pena";
+  static const String JEROME = "Jerome Bell";
 
   //hint_text
   static const String FULL_NAME = "Full Name";

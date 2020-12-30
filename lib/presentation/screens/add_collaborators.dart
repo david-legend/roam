@@ -3,22 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
 import 'package:roam/presentation/widgets/custom_button_2.dart';
+import 'package:roam/presentation/widgets/collaborator_list_tile.dart';
 import 'package:roam/presentation/widgets/custom_text_form_field.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/values/values.dart';
 
-//TODO:: add radio button
 class AddCollaboratorsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(
-          vertical: Sizes.PADDING_32,
-          horizontal: Sizes.PADDING_24,
-        ),
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.symmetric(
+            vertical: Sizes.PADDING_32,
+            horizontal: Sizes.PADDING_24,
+          ),
           children: [
             Row(
               children: [
@@ -38,10 +38,12 @@ class AddCollaboratorsScreen extends StatelessWidget {
               ],
             ),
             SpaceH16(),
-            Text(
-              StringConst.ADD_COLLABORATORS,
-              style: theme.textTheme.headline6.copyWith(
-                color: AppColors.black50,
+            Center(
+              child: Text(
+                StringConst.ADD_COLLABORATORS,
+                style: theme.textTheme.headline6.copyWith(
+                  color: AppColors.black50,
+                ),
               ),
             ),
             SpaceH16(),
@@ -59,10 +61,13 @@ class AddCollaboratorsScreen extends StatelessWidget {
               hasSuffixIcon: true,
               suffixIcon: Icon(
                 FeatherIcons.search,
-                color: AppColors.primaryColor,
+                color: AppColors.accentColor,
               ),
               borderStyle: BorderStyle.solid,
             ),
+            SpaceH16(),
+            ..._buildCollaborators(Data.collaboratorItems),
+            SpaceH20(),
             CustomButton(
               onPressed: () {},
               title: StringConst.FINISH,
@@ -75,5 +80,19 @@ class AddCollaboratorsScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<Widget> _buildCollaborators(List<CollaboratorItem> collaborators) {
+    List<Widget> items = [];
+
+    for (int index = 0; index < collaborators.length; index++) {
+      items.add(
+        CollaboratorListTile(
+          title: collaborators[index].title,
+          imagePath: collaborators[index].imagePath,
+        ),
+      );
+    }
+    return items;
   }
 }

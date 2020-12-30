@@ -327,4 +327,38 @@ class Data {
       collaborators: 72,
     ),
   ];
+
+  static const String HOWARD = "Esther Howard";
+  static const String FISHER = "Cody Fisher";
+  static const String COURTNEY = "Courtney Henry";
+  static const String ANNETTE = "Annette Black";
+  static const String ELEANOR = "Eleanor Pena";
+  static const String JEROME = "Jerome Bell";
+
+  static List<CollaboratorItem> collaboratorItems = [
+    CollaboratorItem(
+      title: StringConst.HOWARD,
+      imagePath: ImagePath.HOWARD,
+    ),
+    CollaboratorItem(
+      title: StringConst.FISHER,
+      imagePath: ImagePath.FISHER,
+    ),
+    CollaboratorItem(
+      title: StringConst.COURTNEY,
+      imagePath: ImagePath.COURTNEY,
+    ),
+    CollaboratorItem(
+      title: StringConst.ANNETTE,
+      imagePath: ImagePath.ANNETTE,
+    ),
+    CollaboratorItem(
+      title: StringConst.ELEANOR,
+      imagePath: ImagePath.ELEANOR,
+    ),
+    CollaboratorItem(
+      title: StringConst.JEROME,
+      imagePath: ImagePath.JEROME,
+    ),
+  ];
 }
