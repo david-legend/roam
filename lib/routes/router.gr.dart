@@ -9,6 +9,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../presentation/screens/add_collaborators.dart';
 import '../presentation/screens/discover_screen.dart';
 import '../presentation/screens/follow_screen.dart';
 import '../presentation/screens/home_screen.dart';
@@ -39,6 +40,7 @@ class Routes {
   static const String myTripsScreen = '/my-trips-screen';
   static const String planTripScreen = '/plan-trip-screen';
   static const String placeScreen = '/place-screen';
+  static const String addCollaboratorsScreen = '/add-collaborators-screen';
   static const all = <String>{
     splashScreen,
     onBoardingScreen,
@@ -54,6 +56,7 @@ class Routes {
     myTripsScreen,
     planTripScreen,
     placeScreen,
+    addCollaboratorsScreen,
   };
 }
 
@@ -75,6 +78,7 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.myTripsScreen, page: MyTripsScreen),
     RouteDef(Routes.planTripScreen, page: PlanTripScreen),
     RouteDef(Routes.placeScreen, page: PlaceScreen),
+    RouteDef(Routes.addCollaboratorsScreen, page: AddCollaboratorsScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -166,6 +170,12 @@ class AppRouter extends RouterBase {
           imagePath: args.imagePath,
           rating: args.rating,
         ),
+        settings: data,
+      );
+    },
+    AddCollaboratorsScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => AddCollaboratorsScreen(),
         settings: data,
       );
     },

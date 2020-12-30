@@ -11,6 +11,8 @@ class CustomAppBar extends StatelessWidget {
     this.onActionTap,
     this.color = Colors.transparent,
     this.trailing,
+    this.leadingColor,
+    this.trailingColor,
     this.leading,
     this.onLeadingTap,
   });
@@ -20,6 +22,8 @@ class CustomAppBar extends StatelessWidget {
   final List<Widget> trailing;
   final Widget leading;
   final Color color;
+  final Color leadingColor;
+  final Color trailingColor;
   final bool hasLeading;
   final bool hasTrailing;
   final bool hasTitle;
@@ -49,7 +53,10 @@ class CustomAppBar extends StatelessWidget {
         onTap: () {},
         child: Padding(
           padding: const EdgeInsets.only(right: Sizes.PADDING_16),
-          child: SvgPicture.asset(ImagePath.BELL),
+          child: SvgPicture.asset(
+            ImagePath.BELL,
+            color: trailingColor,
+          ),
         ),
       )
     ];
@@ -60,7 +67,10 @@ class CustomAppBar extends StatelessWidget {
       onTap: () {},
       child: Padding(
         padding: const EdgeInsets.only(left: Sizes.PADDING_16),
-        child: SvgPicture.asset(ImagePath.MENU_ICON),
+        child: SvgPicture.asset(
+          ImagePath.MENU_ICON,
+          color: leadingColor,
+        ),
       ),
     );
   }

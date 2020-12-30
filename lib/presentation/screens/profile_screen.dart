@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/album_cover.dart';
+import 'package:roam/presentation/widgets/custom_appbar.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
+import 'package:roam/presentation/widgets/custom_button_2.dart';
 import 'package:roam/presentation/widgets/journey_card.dart';
 import 'package:roam/presentation/widgets/section_heading.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
@@ -35,6 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               hasTitle2: false,
             ),
             SpaceH16(),
+            _buildAppBar(),
             Column(
               children: _buildJourneyCards(Data.journeyItems),
             ),
@@ -95,7 +100,42 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       );
     }
-
     return items;
   }
+
+  Widget _buildProfile() {
+    return Container(
+      child: Stack(
+        children: [
+          SvgPicture.asset(ImagePath.BLUE_ELLIPSE),
+          SvgPicture.asset(ImagePath.SEMI_CIRCLE),
+          SvgPicture.asset(ImagePath.YELLOW_CIRCLE),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildAppBar() {
+    return PreferredSize(
+      preferredSize: Size.fromHeight(Sizes.HEIGHT_56),
+      child: CustomAppBar(
+        trailingColor: AppColors.grey,
+        leading: Container(
+          width: Sizes.WIDTH_48,
+          height: Sizes.HEIGHT_48,
+          child: CustomButton2(
+            onPressed: () {},
+            borderRadius: Sizes.RADIUS_8,
+            icon: FeatherIcons.settings,
+            iconColor: AppColors.grey,
+            color: AppColors.white,
+          ),
+        ),
+      ),
+    );
+  }
+
+//  Widget _buildProfile() {
+//    return Container();
+//  }
 }

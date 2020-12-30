@@ -10,6 +10,7 @@ import 'package:roam/presentation/screens/saved_places_screen.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/values/values.dart';
 
+import 'add_collaborators.dart';
 import 'home_screen.dart';
 
 class RootScreen extends StatefulWidget {
@@ -24,9 +25,10 @@ class _RootScreenState extends State<RootScreen> {
   int _selectedIndex = 0;
   final List<Widget> pages = [
     HomeScreen(),
+    AddCollaboratorsScreen(),
     DiscoverScreen(),
     SavedPlacesScreen(),
-    ProfileScreen(),
+//    ProfileScreen(),
   ];
 
   @override

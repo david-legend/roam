@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route_annotations.dart';
+import 'package:roam/presentation/screens/add_collaborators.dart';
 import 'package:roam/presentation/screens/discover_screen.dart';
 import 'package:roam/presentation/screens/follow_screen.dart';
 import 'package:roam/presentation/screens/home_screen.dart';
@@ -35,6 +36,7 @@ import 'package:roam/presentation/screens/splash_screen.dart';
     MaterialRoute(page: MyTripsScreen),
     MaterialRoute(page: PlanTripScreen),
     MaterialRoute(page: PlaceScreen),
+    MaterialRoute(page: AddCollaboratorsScreen),
   ],
 )
 class $AppRouter {}

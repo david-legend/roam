@@ -85,4 +85,14 @@ class ImagePath {
   static const String THAILAND = "$imageDir/thailand.png";
   static const String KANCHANABURI = "$imageDir/kanchanaburi.png";
   static const String LIMA_CITY = "$imageDir/lima.png";
+  static const String BLUE_ELLIPSE = "$imageDir/blue_ellipse.png";
+  static const String SEMI_CIRCLE = "$imageDir/semi_circle.png";
+  static const String YELLOW_CIRCLE = "$imageDir/yellow_circle.png";
+
+  static const String ANNETTE = "$imageDir/annette.png";
+  static const String COURTNEY = "$imageDir/courtney.png";
+  static const String ELEANOR = "$imageDir/eleanor.png";
+  static const String FISHER = "$imageDir/fisher.png";
+  static const String HOWARD = "$imageDir/howard.png";
+  static const String JEROME = "$imageDir/jerome.png";
 }

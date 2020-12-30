@@ -4,7 +4,6 @@ import 'package:roam/values/values.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final TextStyle textFormFieldStyle;
-
   final TextStyle fieldTitleTextStyle;
   final TextStyle hintTextStyle;
   final BorderStyle borderStyle;
@@ -22,6 +21,8 @@ class CustomTextFormField extends StatelessWidget {
   final bool filled;
   final bool obscured;
   final bool hasPrefixIcon;
+  final bool hasSuffixIcon;
+  final Widget suffixIcon;
   final int maxLines;
   final bool hasTitle;
 
@@ -48,6 +49,8 @@ class CustomTextFormField extends StatelessWidget {
     this.filled = true,
     this.obscured = false,
     this.hasTitle = false,
+    this.suffixIcon,
+    this.hasSuffixIcon = false,
     this.fieldTitle,
   });
 
@@ -97,6 +100,7 @@ class CustomTextFormField extends StatelessWidget {
                   style: borderStyle,
                 ),
               ),
+              suffixIcon: hasSuffixIcon ? suffixIcon : null,
               prefixIcon: hasPrefixIcon
                   ? ImageIcon(
                       AssetImage(prefixIconImagePath),

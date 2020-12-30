@@ -148,6 +148,9 @@ class StringConst {
   static const String SUBTITLE_3 = "The strongest bridge around here";
   static const String KANCHANABURI = "Kanchanaburi";
 
+  //Add Collaborators Screen
+  static const String ADD_COLLABORATORS = "Add Friends as Contributors";
+
   //hint_text
   static const String FULL_NAME = "Full Name";
   static const String PASSWORD = "Password";
@@ -158,6 +161,7 @@ class StringConst {
   static const String PASSWORD_HINT_TEXT = "********";
   static const String EMAIL_HINT_TEXT = "example@gmail.com";
   static const String SEARCH_HINT_TEXT = "Search for countries, places etc";
+  static const String SEARCH_HINT_TEXT_2 = "Search for friends";
 
   static const String FACEBOOK = "Facebook";
   static const String GOOGLE = "Google";
