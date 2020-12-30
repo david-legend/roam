@@ -111,7 +111,7 @@ class Data {
     ),
   ];
 
-  static List<String> profileStackedImage = [
+  static const List<String> profileStackedImage = [
     ImagePath.CHAN,
     ImagePath.LEE,
     ImagePath.MONICA,
@@ -255,9 +255,9 @@ class Data {
 
   static List<AttractionCardItem> attractionCardItems = [
     AttractionCardItem(
-      title: StringConst.TANAH,
-      content: StringConst.TANAH_TEXT,
-      imagePath: ImagePath.TANAH,
+      title: StringConst.TANOH,
+      content: StringConst.TANOH_TEXT,
+      imagePath: ImagePath.TANOH,
       rating: 4.6,
     ),
     AttractionCardItem(
@@ -271,6 +271,60 @@ class Data {
       content: StringConst.GILI_ISLAND_TEXT,
       imagePath: ImagePath.GILI_ISLAND,
       rating: 4.3,
+    ),
+  ];
+
+  static List<AlbumCoverItem> albumItems = [
+    AlbumCoverItem(
+      title: StringConst.THAILAND,
+      imagePath: ImagePath.THAILAND,
+      width: 0.4,
+    ),
+    AlbumCoverItem(
+      title: StringConst.INDONESIA,
+      imagePath: ImagePath.INDONESIA,
+      width: 0.6,
+    ),
+    AlbumCoverItem(
+      title: StringConst.PERU,
+      imagePath: ImagePath.PERU_2,
+    ),
+    AlbumCoverItem(
+      title: StringConst.ITALY,
+      imagePath: ImagePath.ITALY,
+      width: 0.3,
+    ),
+    AlbumCoverItem(
+      title: StringConst.VIETNAM,
+      imagePath: ImagePath.VIETNAM_2,
+      width: 0.7,
+    ),
+  ];
+
+  static List<JourneyCardItem> journeyItems = [
+    JourneyCardItem(
+      title: StringConst.TANOH,
+      subtitle: StringConst.SUBTITLE_1,
+      imagePath: ImagePath.TANOH,
+      images: Data.profileStackedImage,
+      rating: 3.8,
+      collaborators: 90,
+    ),
+    JourneyCardItem(
+      title: StringConst.LIMA,
+      subtitle: StringConst.SUBTITLE_2,
+      imagePath: ImagePath.LIMA,
+      images: Data.profileStackedImage,
+      rating: 3.4,
+      collaborators: 83,
+    ),
+    JourneyCardItem(
+      title: StringConst.KANCHANABURI,
+      subtitle: StringConst.SUBTITLE_3,
+      imagePath: ImagePath.KANCHANABURI,
+      images: Data.profileStackedImage,
+      rating: 4.4,
+      collaborators: 72,
     ),
   ];
 }

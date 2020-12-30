@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ImageClipper extends CustomClipper<Path> {
-  ImageClipper();
+  const ImageClipper();
 
   @override
   Path getClip(Size size) {

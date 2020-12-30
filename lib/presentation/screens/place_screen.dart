@@ -1,14 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:easy_rich_text/easy_rich_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/attraction_card.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
 import 'package:roam/presentation/widgets/custom_button_2.dart';
 import 'package:roam/presentation/widgets/explore_card.dart';
-import 'package:roam/presentation/widgets/image_clipper.dart';
 import 'package:roam/presentation/widgets/section_heading.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/presentation/widgets/stacked_images.dart';

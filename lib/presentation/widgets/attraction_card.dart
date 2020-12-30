@@ -66,7 +66,7 @@ class AttractionCard extends StatelessWidget {
                 topRight: const Radius.circular(Sizes.RADIUS_12),
               ),
               child: ClipPath(
-                clipper: ImageClipper(),
+                clipper: const ImageClipper(),
                 child: Image.asset(
                   imagePath,
                   width: widthOfCard,

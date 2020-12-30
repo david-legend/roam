@@ -74,7 +74,15 @@ class ImagePath {
   static const String MORE_4 = "$imageDir/more_4.png";
   static const String MORE_5 = "$imageDir/more_5.png";
 
-  static const String TANAH = "$imageDir/tanah.png";
+  static const String TANOH = "$imageDir/tanah.png";
   static const String SACRED_MONKEY = "$imageDir/sacred_monkey.png";
   static const String GILI_ISLAND = "$imageDir/gili_island.png";
+
+  static const String VIETNAM_2 = "$imageDir/vietnam_2.png";
+  static const String INDONESIA = "$imageDir/indonesia.png";
+  static const String ITALY = "$imageDir/italy.png";
+  static const String PERU_2 = "$imageDir/peru.png";
+  static const String THAILAND = "$imageDir/thailand.png";
+  static const String KANCHANABURI = "$imageDir/kanchanaburi.png";
+  static const String LIMA_CITY = "$imageDir/lima.png";
 }

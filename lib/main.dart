@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightThemeData,
       builder: ExtendedNavigator<AppRouter>(
         router: AppRouter(),
-        initialRoute: Routes.rootScreen,
+        initialRoute: Routes.splashScreen,
       ),
     );
   }

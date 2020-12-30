@@ -62,10 +62,11 @@ class StringConst {
   static const String MEALS = "Meals";
   static const String DISCOVER = "Discover";
   static const String SEE_ALL = "See all";
-  static const String TRENDING_SIGHTS = "Trending Sights";
+  static const String TRENDING_SIGHTS = "Trending Sites";
   static const String FOR_YOU = "For You";
   static const String MOST_VISITED = "Most Visited";
   static const String LIMA_CITY = "Lima City";
+  static const String LIMA = "Lima";
   static const String PERU = "Peru";
   static const String HALONG_BAY = "Halong Bay";
   static const String VIETNAM = "Vietnam";
@@ -128,14 +129,24 @@ class StringConst {
   static const String BREAKFAST_PLACES = "Places for breakfast";
   static const String BEACHES = "Beaches";
   static const String RESORTS = "Resorts in Bali";
-  static const String TANAH = "Tanah Lot";
-  static const String TANAH_TEXT = "Island Templs with water views";
+  static const String TANOH = "Tanah Lot";
+  static const String TANOH_TEXT = "Island Templs with water views";
   static const String SACRED_MONKEY = "Sacred Monkey Sanctuary";
   static const String SACRED_MONKEY_TEXT = "Temple Complex with many monkeys";
   static const String GILI_ISLAND = "Gili Island";
   static const String GILI_ISLAND_TEXT = "Three tiny Island near sandy beaches";
   static const String SEE_MORE = "Want to see more?";
   static const String LETS_GO = "Let's go to ";
+
+  //Profile Screen
+  static const String PHOTO_STORIES = "My Photos & Stories";
+  static const String JOURNEYS = "My Journeys";
+  static const String THAILAND = "Thailand";
+  static const String SEE_JOURNEYS = "See all journeys";
+  static const String SUBTITLE_1 = "Island Temples with water views";
+  static const String SUBTITLE_2 = "Beautiful scenes and luxurious places";
+  static const String SUBTITLE_3 = "The strongest bridge around here";
+  static const String KANCHANABURI = "Kanchanaburi";
 
   //hint_text
   static const String FULL_NAME = "Full Name";

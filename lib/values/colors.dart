@@ -17,6 +17,7 @@ class AppColors {
 
   //White
   static const Color white = Color(0xFFFFFFFF);
+  static const Color white20 = Color(0xFFF2F2F2);
   static const Color white50 = Color(0xFFFAFAFA);
   static const Color white100 = Color(0xFFFDFDFD);
 
@@ -42,7 +43,6 @@ class AppColors {
   static const Color facebookBlue = Color(0xFF44619D);
 
   //Yellow
-
   static const Color yellow10 = Color(0xFFFFF7E6);
   static const Color yellow30 = Color(0xFFFFF1D4);
   static const Color yellow = Color(0xFFFBBA3E);
