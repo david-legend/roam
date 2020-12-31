@@ -69,7 +69,9 @@ class AddCollaboratorsScreen extends StatelessWidget {
             ..._buildCollaborators(Data.collaboratorItems),
             SpaceH20(),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                ExtendedNavigator.root.pop();
+              },
               title: StringConst.FINISH,
               textStyle: theme.textTheme.subtitle1.copyWith(
                 color: AppColors.white,
