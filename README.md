@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    Roam — UI / UX Case study for a travel advisory app done by <a href="https://www.linkedin.com/in/georgina-sekyi-050932175/" target="_blank">Georgina Sekyi</a> and built by <a href="https://www.linkedin.com/in/david-cobbina-7b0226119/" target="_blank">David Cobbina</a> <strong>flutter</strong>.
+    Roam — UI / UX Case study for a travel advisory app done by <a href="https://www.linkedin.com/in/georgina-sekyi-050932175/" target="_blank">Georgina Sekyi</a> and built by <a href="https://www.linkedin.com/in/david-cobbina-7b0226119/" target="_blank">David Cobbina</a> using <strong>flutter</strong>.
 </p>
 <p align="center">
     Find link to the medium article <a href="https://gynahsekyi13.medium.com/roam-ui-ux-case-study-for-a-travel-advisory-app-8094c71b3d76" target="_blank">here</a>
@@ -33,10 +33,10 @@
 ![Screenshot](assets/screenshots/roam_explore.jpeg)
 
 # Profile Screen Design
-![Screenshot](assets/screenshots/roam_explore.jpeg)
+![Screenshot](assets/screenshots/roam_profile.jpeg)
 
 # Roam FlowChart
-![Screenshot](assets/screenshots/roam_flow_chart.jpeg)
+![Screenshot](assets/screenshots/roam_flow_chart.png)
 
 # WireFrames
 ![Screenshot](assets/screenshots/wireframes_app.jpeg)
