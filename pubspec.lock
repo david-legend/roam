@@ -212,7 +212,7 @@ packages:
     source: hosted
     version: "1.2.0"
   easy_rich_text:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: easy_rich_text
       url: "https://pub.dartlang.org"
@@ -264,7 +264,7 @@ packages:
     source: hosted
     version: "1.0.3"
   flutter_rating_bar:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_rating_bar
       url: "https://pub.dartlang.org"
