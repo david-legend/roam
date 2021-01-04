@@ -15,16 +15,16 @@ class InterestItem {
 
 class SelectInterestScreen extends StatelessWidget {
   List<InterestItem> items = [
-    InterestItem(StringConst.NATURE, ImagePath.NATURE),
+    InterestItem(StringConst.NATURE, ImagePath.THAILAND),
     InterestItem(StringConst.FOOD, ImagePath.FOOD),
     InterestItem(StringConst.PEOPLE, ImagePath.PEOPLE),
-    InterestItem(StringConst.ADVENTURE, ImagePath.ADVENTURE),
+    InterestItem(StringConst.ADVENTURE, ImagePath.GREAT_WALL),
     InterestItem(StringConst.WILDLIFE, ImagePath.WILDLIFE),
-    InterestItem(StringConst.CULTURE, ImagePath.CULTURE),
-    InterestItem(StringConst.BEACH, ImagePath.BEACH),
+    InterestItem(StringConst.CULTURE, ImagePath.VIETNAM_2),
+    InterestItem(StringConst.BEACH, ImagePath.BEACHES_BALI),
     InterestItem(StringConst.MOUNTAIN, ImagePath.MOUNTAIN),
     InterestItem(StringConst.URBAN, ImagePath.URBAN),
-    InterestItem(StringConst.RESORT, ImagePath.RESORT),
+    InterestItem(StringConst.RESORT, ImagePath.RESORTS),
   ];
 
   @override

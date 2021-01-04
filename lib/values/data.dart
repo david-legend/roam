@@ -21,22 +21,16 @@ class Data {
       color: AppColors.deepYellow,
     ),
     DiscoverCardItem(
-      title: StringConst.ANIMALS,
-      icon: ImagePath.ELEPHANT,
+      title: StringConst.NATURE,
+      icon: ImagePath.NATURE_ICON,
       backgroundColor: AppColors.lightGreen70,
       color: AppColors.darkGreen,
     ),
     DiscoverCardItem(
-      title: StringConst.ADVENTURE,
-      icon: ImagePath.CAR,
+      title: StringConst.BEACHES,
+      icon: ImagePath.BEACHES,
       backgroundColor: AppColors.purple10,
       color: AppColors.purple,
-    ),
-    DiscoverCardItem(
-      title: StringConst.MEALS,
-      icon: ImagePath.MEAL,
-      backgroundColor: AppColors.yellow10,
-      color: AppColors.deepYellow,
     ),
   ];
 
@@ -45,31 +39,31 @@ class Data {
       title: StringConst.LIMA_CITY,
       subtitle: StringConst.PERU,
       rating: 4.4,
-      imagePath: ImagePath.LIMA,
+      imagePath: ImagePath.LIMA_1,
     ),
     TrendingCardItem(
       title: StringConst.BALI,
       subtitle: StringConst.INDONESIA,
       rating: 4.5,
-      imagePath: ImagePath.LIMA,
+      imagePath: ImagePath.REGIS_BALI,
     ),
     TrendingCardItem(
       title: StringConst.RHODES,
       subtitle: StringConst.GREECE,
       rating: 4.4,
-      imagePath: ImagePath.LIMA,
+      imagePath: ImagePath.RHODES_GREECE,
     ),
     TrendingCardItem(
       title: StringConst.HALONG_BAY,
       subtitle: StringConst.VIETNAM,
       rating: 4.3,
-      imagePath: ImagePath.LIMA,
+      imagePath: ImagePath.HALONG_BAY,
     ),
     TrendingCardItem(
       title: StringConst.VATICAN_CITY,
       subtitle: StringConst.ITALY,
       rating: 4.5,
-      imagePath: ImagePath.LIMA,
+      imagePath: ImagePath.VATICAN_CITY,
     ),
   ];
 
@@ -86,61 +80,61 @@ class Data {
       subtitle: StringConst.PERU,
       content: StringConst.CONTENT_RATING_2,
       rating: 4.5,
-      imagePath: ImagePath.HOI_ANN,
+      imagePath: ImagePath.BARRANCO,
     ),
     PlaceCardItem(
       title: StringConst.VARANASI,
       subtitle: StringConst.INDIA,
       content: StringConst.CONTENT_RATING_3,
       rating: 4.4,
-      imagePath: ImagePath.LIMA,
+      imagePath: ImagePath.VARANASI,
     ),
     PlaceCardItem(
       title: StringConst.MYKONO,
       subtitle: StringConst.GREECE,
       content: StringConst.CONTENT_RATING_4,
       rating: 4.3,
-      imagePath: ImagePath.HOI_ANN,
+      imagePath: ImagePath.MYKONO,
     ),
     PlaceCardItem(
-      title: StringConst.VERNICE,
+      title: StringConst.VENICE,
       subtitle: StringConst.ITALY,
       content: StringConst.CONTENT_RATING_5,
       rating: 4.5,
-      imagePath: ImagePath.HOI_ANN,
+      imagePath: ImagePath.VENICE,
     ),
   ];
 
   static const List<String> profileStackedImage = [
-    ImagePath.CHAN,
-    ImagePath.LEE,
-    ImagePath.MONICA,
-    ImagePath.TAYLOR,
+    ImagePath.LESLIE,
+    ImagePath.DARELL,
+    ImagePath.HAWKINS,
+    ImagePath.JANE,
   ];
 
   static List<OldTripItem> oldTripItems = [
     OldTripItem(
       title: StringConst.PERU_BEACH,
       subtitle: StringConst.DURATION_1,
-      imagePath: ImagePath.PERU,
+      imagePath: ImagePath.BEACHES_2,
       collaborators: 3,
     ),
     OldTripItem(
       title: StringConst.VIETNAM_19,
       subtitle: StringConst.DURATION_2,
-      imagePath: ImagePath.VIETNAM,
+      imagePath: ImagePath.VIETNAM_2,
       collaborators: 2,
     ),
     OldTripItem(
-      title: StringConst.TOKYO,
+      title: StringConst.BALI,
       subtitle: StringConst.DURATION_1,
-      imagePath: ImagePath.TOKYO,
+      imagePath: ImagePath.MORE_2,
       collaborators: 1,
     ),
     OldTripItem(
       title: StringConst.PARIS_FUN,
       subtitle: StringConst.DURATION_2,
-      imagePath: ImagePath.PARIS,
+      imagePath: ImagePath.EIFFEL_TOWER,
       collaborators: 6,
     ),
   ];
@@ -213,8 +207,9 @@ class Data {
     ImagePath.MORE_1,
     ImagePath.MORE_2,
     ImagePath.MORE_3,
-    ImagePath.BLACK_LAGOON,
-    ImagePath.MORE_1,
+    ImagePath.MORE_4,
+    ImagePath.MORE_5,
+    ImagePath.MORE_6,
   ];
 
   static const List<String> defaultTags = [
@@ -233,21 +228,21 @@ class Data {
     ExploreCardItem(
       title: StringConst.BREAKFAST_PLACES,
       content: StringConst.CONTENT_RATING_1,
-      imagePath: ImagePath.MORE_1,
+      imagePath: ImagePath.BREAKFAST,
       tags: tagItems1,
       rating: 4.0,
     ),
     ExploreCardItem(
       title: StringConst.BEACHES,
       content: StringConst.CONTENT_RATING_3,
-      imagePath: ImagePath.MORE_2,
+      imagePath: ImagePath.BEACHES_BALI,
       tags: tagItems2,
       rating: 5.0,
     ),
     ExploreCardItem(
       title: StringConst.RESORTS,
       content: StringConst.CONTENT_RATING_4,
-      imagePath: ImagePath.MORE_3,
+      imagePath: ImagePath.RESORTS,
       tags: tagItems1,
       rating: 3.5,
     ),
@@ -257,7 +252,7 @@ class Data {
     AttractionCardItem(
       title: StringConst.TANOH,
       content: StringConst.TANOH_TEXT,
-      imagePath: ImagePath.TANOH,
+      imagePath: ImagePath.TANAH_LOT,
       rating: 4.6,
     ),
     AttractionCardItem(
@@ -309,7 +304,7 @@ class Data {
     JourneyCardItem(
       title: StringConst.TANOH,
       subtitle: StringConst.SUBTITLE_1,
-      imagePath: ImagePath.TANOH,
+      imagePath: ImagePath.TANAH_LOT,
       images: Data.profileStackedImage,
       rating: 3.8,
       collaborators: 90,
@@ -317,7 +312,7 @@ class Data {
     JourneyCardItem(
       title: StringConst.LIMA,
       subtitle: StringConst.SUBTITLE_2,
-      imagePath: ImagePath.LIMA,
+      imagePath: ImagePath.LIMA_1,
       images: Data.profileStackedImage,
       rating: 3.4,
       collaborators: 83,

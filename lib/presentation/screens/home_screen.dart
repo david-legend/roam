@@ -110,6 +110,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Data.discoverCardItems[index].color,
                   child: SvgPicture.asset(
                     Data.discoverCardItems[index].icon,
+                    width: Sizes.WIDTH_40,
+                    height: Sizes.HEIGHT_40,
+                    color: Data.discoverCardItems[index].color,
                   ),
                   onTap: () {},
                 );

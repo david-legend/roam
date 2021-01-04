@@ -54,14 +54,16 @@ class StringConst {
   static const String FOOD = "Food";
   static const String MOUNTAIN = "Mountain";
   static const String NATURE = "Nature";
-  static const String PEOPLE = "People liked this";
+  static const String PEOPLE = "People";
   static const String RESORT = "Resort";
   static const String URBAN = "Urban";
-  static const String WILDLIFE = "Wildlife";
 
   //HomeScreen
+  static const String PEOPLE_LIKES = "People liked this";
+  static const String WILDLIFE = "Wildlife";
   static const String TRAVEL = "Travel the world in grand style";
   static const String ANIMALS = "Animals";
+  static const String BEACHES = "Beaches";
   static const String MEALS = "Meals";
   static const String DISCOVER = "Discover";
   static const String SEE_ALL = "See all";
@@ -80,7 +82,7 @@ class StringConst {
   static const String BALI = "Regis, Bali";
   static const String INDONESIA = "Indonesia";
 
-  static const String VERNICE = "Vernice";
+  static const String VENICE = "Venice";
   static const String HOI_ANN = "Hoi Ann";
   static const String VARANASI = "Varanasi";
   static const String BARRANCO = "Barranco";
@@ -96,11 +98,14 @@ class StringConst {
   //DiscoverScreen
   static const String MY_TRIPS = "My Trips";
   static const String TRIP_COLLABORATORS = "Trip Collaborators";
+  static const String ITALY_ADVENTURE = "Italy Adventure 2021";
+  static const String DURATION = "09 Jan - 21 Jan";
   static const String TRIP_SUMMARY =
       "A vacation trip with friends to Bali Indonesia ro see the resorts, beaches etc.";
   static const String OLD_TRIP = "Old Trips";
   static const String PERU_BEACH = "Peru Beaches '19";
   static const String TOKYO = "Tokyo '15";
+  static const String BALI_BEACHES = "Bali Beaches '15";
   static const String VIETNAM_19 = "Love Vietnam '19";
   static const String PARIS_FUN = "Parin Fun '17";
 
@@ -130,7 +135,6 @@ class StringConst {
   static const String LUXURY_TAG = "Luxury";
   static const String NATURE_TAG = "Nature";
   static const String BREAKFAST_PLACES = "Places for breakfast";
-  static const String BEACHES = "Beaches";
   static const String RESORTS = "Resorts in Bali";
   static const String TANOH = "Tanah Lot";
   static const String TANOH_TEXT = "Island Templs with water views";

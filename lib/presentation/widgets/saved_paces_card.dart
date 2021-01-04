@@ -101,7 +101,7 @@ class SavedPlacesCard extends StatelessWidget {
                               ),
                               SpaceW4(),
                               Text(
-                                StringConst.PEOPLE,
+                                StringConst.PEOPLE_LIKES,
                                 overflow: TextOverflow.ellipsis,
                                 style: theme.textTheme.bodyText2.copyWith(
                                   color: AppColors.primaryColor,

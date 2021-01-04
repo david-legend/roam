@@ -71,6 +71,7 @@ class _InterestCardState extends State<InterestCard> {
                 widget.imagePath,
                 width: widget.width ?? defaultWidthOfImage,
                 height: widget.height ?? defaultHeightOfImage,
+                fit: BoxFit.cover,
               ),
             ),
             Positioned(

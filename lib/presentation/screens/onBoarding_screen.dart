@@ -42,7 +42,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       StringConst.LOREM_IPSUM_1,
     ),
     OnBoardingItem(
-      ImagePath.FRIENDSHIP,
+      ImagePath.FRIENDSHIP_1,
       StringConst.ONBOARDING_TITLE_3,
       StringConst.LOREM_IPSUM_2,
     ),
