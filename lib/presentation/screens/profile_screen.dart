@@ -3,7 +3,6 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/album_cover.dart';
-import 'package:roam/presentation/widgets/custom_appbar.dart';
 import 'package:roam/presentation/widgets/custom_button.dart';
 import 'package:roam/presentation/widgets/custom_button_2.dart';
 import 'package:roam/presentation/widgets/journey_card.dart';
@@ -19,90 +18,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen>
-    with TickerProviderStateMixin {
-//  AnimationController _controller;
-//  Animation<double> heightOfCard;
-//  Animation<double> semiCircleScale;
-//  Animation<double> ellipseScale;
-//  Animation<double> profileImageScale;
-//  bool _isAboutUserVisible = false;
-//  bool _isYellowCircleVisible = false;
-//  bool _isNotificationBellVisible = false;
-//  bool _isUserDataVisible = false;
-//  bool _isOpen =
-//      false; //handles the chevron_down arrow (whether it is pointing downwards or upwards) and also whether to reverse or play animation
-//
-//  @override
-//  void initState() {
-//    super.initState();
-//    _controller = AnimationController(
-//      duration: const Duration(milliseconds: 2000),
-//      vsync: this,
-//    );
-//  }
-//
-//  initializeTweens() {
-//    heightOfCard = Tween<double>(
-//      begin: 0.6,
-//      end: 0.2,
-//    ).animate(
-//      CurvedAnimation(
-//        parent: _controller,
-//        curve: Interval(
-//          0.4,
-//          1.0,
-//          curve: Curves.easeInOutCubic,
-//        ),
-//      ),
-//    );
-//    semiCircleScale = Tween<double>(
-//      begin: 1.0,
-//      end: 0.5,
-//    ).animate(
-//      CurvedAnimation(
-//        parent: _controller,
-//        curve: Interval(
-//          0.4,
-//          1.0,
-//          curve: Curves.easeInOutCubic,
-//        ),
-//      ),
-//    );
-//    ellipseScale = Tween<double>(
-//      begin: 1.0,
-//      end: 0.5,
-//    ).animate(
-//      CurvedAnimation(
-//        parent: _controller,
-//        curve: Interval(
-//          0.4,
-//          1.0,
-//          curve: Curves.easeInOutCubic,
-//        ),
-//      ),
-//    );
-//    profileImageScale = Tween<double>(
-//      begin: 1.0,
-//      end: 0.5,
-//    ).animate(
-//      CurvedAnimation(
-//        parent: _controller,
-//        curve: Interval(
-//          0.4,
-//          1.0,
-//          curve: Curves.easeInOutCubic,
-//        ),
-//      ),
-//    );
-//  }
-//
-//  Future<void> _playAnimation() async {
-//    try {
-//      await _controller.forward().orCancel;
-//    } on TickerCanceled {
-//      // the animation got canceled, probably because it was disposed of
-//    }
-//  }
+     {
 
   @override
   Widget build(BuildContext context) {
@@ -246,13 +162,13 @@ class _ProfileScreenState extends State<ProfileScreen>
                           children: [
                             Text(
                               StringConst.KRISTIN,
-                              style: theme.textTheme.headline5.copyWith(
+                              style: theme.textTheme.headlineMedium?.copyWith(
                                 color: AppColors.black50,
                               ),
                             ),
                             Text(
                               StringConst.USER_HANDLE,
-                              style: theme.textTheme.bodyText2.copyWith(
+                              style: theme.textTheme.bodyMedium?.copyWith(
                                 color: AppColors.grey200,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -260,7 +176,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                             SpaceH12(),
                             Text(
                               StringConst.ABOUT_USER,
-                              style: theme.textTheme.bodyText2.copyWith(
+                              style: theme.textTheme.bodyMedium?.copyWith(
                                 color: AppColors.black20,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -331,7 +247,7 @@ class _ProfileScreenState extends State<ProfileScreen>
             width: Sizes.WIDTH_1,
             color: AppColors.accentColor,
           ),
-          textStyle: theme.textTheme.subtitle1.copyWith(
+          textStyle: theme.textTheme.titleLarge?.copyWith(
             color: AppColors.accentColor,
           ),
         )
@@ -380,8 +296,8 @@ class _ProfileScreenState extends State<ProfileScreen>
 
 class VerticalText extends StatelessWidget {
   VerticalText({
-    @required this.title,
-    @required this.subtitle,
+    required this.title,
+    required this.subtitle,
   });
 
   final String title;
@@ -396,14 +312,14 @@ class VerticalText extends StatelessWidget {
         children: [
           Text(
             title,
-            style: theme.textTheme.headline6.copyWith(
+            style: theme.textTheme.headlineSmall?.copyWith(
               color: AppColors.black50,
             ),
           ),
           SpaceH8(),
           Text(
             subtitle,
-            style: theme.textTheme.bodyText1.copyWith(
+            style: theme.textTheme.bodyLarge?.copyWith(
               color: AppColors.black50,
               fontSize: Sizes.TEXT_SIZE_14,
             ),

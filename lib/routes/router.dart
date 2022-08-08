@@ -1,10 +1,10 @@
-import 'package:auto_route/auto_route_annotations.dart';
+
+import 'package:auto_route/auto_route.dart';
 import 'package:roam/presentation/screens/add_collaborators.dart';
 import 'package:roam/presentation/screens/discover_screen.dart';
 import 'package:roam/presentation/screens/follow_screen.dart';
 import 'package:roam/presentation/screens/home_screen.dart';
 import 'package:roam/presentation/screens/login_screen.dart';
-import 'package:roam/presentation/screens/my_trips_screen.dart';
 import 'package:roam/presentation/screens/onBoarding_screen.dart';
 import 'package:roam/presentation/screens/place_screen.dart';
 import 'package:roam/presentation/screens/plan_trip_screen.dart';
@@ -33,7 +33,6 @@ import 'package:roam/presentation/screens/splash_screen.dart';
     MaterialRoute(page: DiscoverScreen),
     MaterialRoute(page: SavedPlacesScreen),
     MaterialRoute(page: ProfileScreen),
-    MaterialRoute(page: MyTripsScreen),
     MaterialRoute(page: PlanTripScreen),
     MaterialRoute(page: PlaceScreen),
     MaterialRoute(page: AddCollaboratorsScreen),

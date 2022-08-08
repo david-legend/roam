@@ -1,11 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/custom_appbar.dart';
 import 'package:roam/presentation/widgets/old_trip_card.dart';
 import 'package:roam/presentation/widgets/section_heading.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
-import 'package:roam/presentation/widgets/stacked_images.dart';
 import 'package:roam/presentation/widgets/trip_card.dart';
 import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
@@ -25,11 +23,11 @@ class DiscoverScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          ExtendedNavigator.root.push(Routes.planTripScreen);
+          AutoRouter.of(context).push(PlanTripScreenRoute());
         },
         label: Text(
           StringConst.NEW_TRIP,
-          style: theme.textTheme.subtitle1.copyWith(
+          style: theme.textTheme.titleLarge?.copyWith(
             color: AppColors.white,
           ),
         ),
@@ -46,7 +44,7 @@ class DiscoverScreen extends StatelessWidget {
         children: [
           Text(
             StringConst.MY_TRIPS,
-            style: theme.textTheme.headline5.copyWith(
+            style: theme.textTheme.headlineMedium?.copyWith(
               color: AppColors.primaryColor,
               fontSize: Sizes.TEXT_SIZE_28,
             ),

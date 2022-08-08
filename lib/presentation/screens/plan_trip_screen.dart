@@ -16,7 +16,7 @@ class PlanTripScreen extends StatelessWidget {
     ThemeData theme = Theme.of(context);
     double width = assignWidth(context: context, fraction: 1);
     double height = assignHeight(context: context, fraction: 0.4);
-    TextStyle titleStyle = theme.textTheme.subtitle1.copyWith(
+    TextStyle? titleStyle = theme.textTheme.titleLarge?.copyWith(
       color: AppColors.black50,
     );
     return Scaffold(
@@ -49,7 +49,7 @@ class PlanTripScreen extends StatelessWidget {
                         height: Sizes.HEIGHT_50,
                         child: CustomButton2(
                           onPressed: () {
-                            ExtendedNavigator.root.pop();
+                            AutoRouter.of(context).pop();
                           },
                           borderRadius: Sizes.RADIUS_12,
                           icon: Icons.arrow_back_ios,
@@ -71,12 +71,12 @@ class PlanTripScreen extends StatelessWidget {
                   Text(StringConst.TRIP_NAME, style: titleStyle),
                   SpaceH16(),
                   CustomTextFormField(
-                    textFormFieldStyle: theme.textTheme.subtitle1.copyWith(
+                    textFormFieldStyle: theme.textTheme.titleLarge?.copyWith(
                       color: AppColors.secondaryColor,
                     ),
                     hintText: StringConst.TRIP_HINT_TEXT,
                     prefixIconColor: AppColors.primaryColor,
-                    hintTextStyle: theme.textTheme.bodyText2.copyWith(
+                    hintTextStyle: theme.textTheme.bodyMedium?.copyWith(
                       color: AppColors.grey,
                     ),
                     filled: true,
@@ -87,12 +87,12 @@ class PlanTripScreen extends StatelessWidget {
                   Text(StringConst.DATE, style: titleStyle),
                   SpaceH16(),
                   CustomTextFormField(
-                    textFormFieldStyle: theme.textTheme.subtitle1.copyWith(
+                    textFormFieldStyle: theme.textTheme.titleLarge?.copyWith(
                       color: AppColors.secondaryColor,
                     ),
                     hintText: StringConst.DATE_HINT_TEXT,
                     prefixIconColor: AppColors.primaryColor,
-                    hintTextStyle: theme.textTheme.bodyText2.copyWith(
+                    hintTextStyle: theme.textTheme.bodyMedium?.copyWith(
                       color: AppColors.grey,
                     ),
                     filled: true,
@@ -114,12 +114,12 @@ class PlanTripScreen extends StatelessWidget {
                         width: assignWidth(context: context, fraction: 0.3),
                         child: CustomButton(
                           onPressed: () {
-                            ExtendedNavigator.root
-                                .push(Routes.addCollaboratorsScreen);
+                            AutoRouter.of(context)
+                                .push(AddCollaboratorsScreenRoute());
                           },
                           height: Sizes.HEIGHT_44,
                           title: StringConst.PARTY,
-                          textStyle: theme.textTheme.subtitle1.copyWith(
+                          textStyle: theme.textTheme.titleLarge?.copyWith(
                             color: AppColors.white,
                           ),
                           borderRadius: Sizes.RADIUS_8,
@@ -133,7 +133,7 @@ class PlanTripScreen extends StatelessWidget {
                           title: StringConst.SOLO,
                           color: AppColors.white,
                           borderSide: BorderSide(color: AppColors.grey),
-                          textStyle: theme.textTheme.subtitle1.copyWith(
+                          textStyle: theme.textTheme.titleLarge?.copyWith(
                             color: AppColors.grey,
                           ),
                           borderRadius: Sizes.RADIUS_8,
@@ -145,7 +145,7 @@ class PlanTripScreen extends StatelessWidget {
                   CustomButton(
                     onPressed: () {},
                     title: StringConst.START_MY_TRIP,
-                    textStyle: theme.textTheme.subtitle1.copyWith(
+                    textStyle: theme.textTheme.titleLarge?.copyWith(
                       color: AppColors.white,
                     ),
                     borderRadius: Sizes.RADIUS_8,

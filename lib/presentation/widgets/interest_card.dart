@@ -9,8 +9,8 @@ const double kSpacing = Sizes.PADDING_16;
 
 class InterestCard extends StatefulWidget {
   InterestCard({
-    @required this.title,
-    @required this.imagePath,
+    required this.title,
+    required this.imagePath,
     this.width,
     this.height,
     this.padding = ((kSidePadding * 2) + kSpacing),
@@ -24,15 +24,15 @@ class InterestCard extends StatefulWidget {
   });
 
   final String title;
-  final TextStyle titleStyle;
-  final double width;
-  final double height;
+  final TextStyle? titleStyle;
+  final double? width;
+  final double? height;
   final double padding;
   final String imagePath;
-  final BorderRadiusGeometry borderRadius;
+  final BorderRadius? borderRadius;
   final IconData iconData;
   final bool isSelected;
-  final double titleTopOffset;
+  final double? titleTopOffset;
 
   @override
   _InterestCardState createState() => _InterestCardState();
@@ -80,7 +80,7 @@ class _InterestCardState extends State<InterestCard> {
               child: Text(
                 widget.title,
                 style: widget.titleStyle ??
-                    theme.textTheme.subtitle1.copyWith(
+                    theme.textTheme.titleLarge?.copyWith(
                       color: AppColors.white,
                     ),
               ),

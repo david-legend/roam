@@ -16,10 +16,10 @@ const double kPaddingHorizontal = Sizes.PADDING_24;
 
 class PlaceScreen extends StatelessWidget {
   PlaceScreen({
-    @required this.place,
-    @required this.location,
-    @required this.imagePath,
-    @required this.rating,
+    required this.place,
+    required this.location,
+    required this.imagePath,
+    required this.rating,
   });
 
   final String place;
@@ -48,7 +48,7 @@ class PlaceScreen extends StatelessWidget {
                 children: [
                   Text(
                     StringConst.LOREM_IPSUM_2,
-                    style: theme.textTheme.bodyText1.copyWith(
+                    style: theme.textTheme.bodyLarge?.copyWith(
                       color: AppColors.primaryText2,
                     ),
                   ),
@@ -118,7 +118,7 @@ class PlaceScreen extends StatelessWidget {
               Center(
                 child: Text(
                   StringConst.SEE_MORE,
-                  style: theme.textTheme.bodyText2.copyWith(
+                  style: theme.textTheme.bodyMedium?.copyWith(
                     color: AppColors.primaryColor,
                   ),
                 ),
@@ -128,7 +128,7 @@ class PlaceScreen extends StatelessWidget {
                 onPressed: () {},
                 borderRadius: Sizes.RADIUS_8,
                 title: StringConst.LETS_GO + place,
-                textStyle: theme.textTheme.subtitle1.copyWith(
+                textStyle: theme.textTheme.titleLarge?.copyWith(
                   color: AppColors.white,
                 ),
               ),
@@ -216,7 +216,8 @@ class PlaceScreen extends StatelessWidget {
                 width: Sizes.WIDTH_50,
                 height: Sizes.HEIGHT_50,
                 child: CustomButton2(
-                  onPressed: () => ExtendedNavigator.root.pop(),
+                  onPressed: () =>
+                      AutoRouter.of(context).pop(),
                   icon: Icons.arrow_back_ios,
                   borderRadius: Sizes.RADIUS_8,
                 ),
@@ -236,7 +237,7 @@ class PlaceScreen extends StatelessWidget {
                   children: [
                     Text(
                       "$rating",
-                      style: theme.textTheme.subtitle1.copyWith(
+                      style: theme.textTheme.titleLarge?.copyWith(
                         color: AppColors.white,
                         fontSize: Sizes.TEXT_SIZE_14,
                       ),
@@ -263,7 +264,7 @@ class PlaceScreen extends StatelessWidget {
                   children: [
                     Text(
                       "$place",
-                      style: theme.textTheme.headline5.copyWith(
+                      style: theme.textTheme.headlineMedium?.copyWith(
                         color: AppColors.white,
                       ),
                     ),
@@ -277,7 +278,7 @@ class PlaceScreen extends StatelessWidget {
                         SpaceW4(),
                         Text(
                           "$location",
-                          style: theme.textTheme.subtitle1.copyWith(
+                          style: theme.textTheme.titleLarge?.copyWith(
                             color: AppColors.yellow,
                             fontSize: Sizes.TEXT_SIZE_20,
                           ),
@@ -299,7 +300,7 @@ class PlaceScreen extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: StringConst.TEMPERATURE,
-                        style: theme.textTheme.headline5.copyWith(
+                        style: theme.textTheme.headlineMedium?.copyWith(
                           color: AppColors.white,
                         ),
                       ),
@@ -309,7 +310,7 @@ class PlaceScreen extends StatelessWidget {
                           child: Text(
                             StringConst.CELSIUS,
                             textScaleFactor: 0.7,
-                            style: theme.textTheme.subtitle1.copyWith(
+                            style: theme.textTheme.titleLarge?.copyWith(
                               color: AppColors.white,
                               fontSize: Sizes.TEXT_SIZE_20,
                             ),
@@ -336,8 +337,8 @@ class PlaceScreen extends StatelessWidget {
           title: exploreItems[index].title,
           content: exploreItems[index].content,
           imagePath: exploreItems[index].imagePath,
-          tags: exploreItems[index].tags,
-          rating: exploreItems[index].rating,
+          tags: exploreItems[index].tags!,
+          rating: exploreItems[index].rating!,
         ),
       );
     }
@@ -356,7 +357,7 @@ class PlaceScreen extends StatelessWidget {
             title: Data.attractionCardItems[index].title,
             content: Data.attractionCardItems[index].content,
             imagePath: Data.attractionCardItems[index].imagePath,
-            rating: Data.attractionCardItems[index].rating,
+            rating: Data.attractionCardItems[index].rating!,
           );
         },
         separatorBuilder: (BuildContext context, int index) {

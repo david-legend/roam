@@ -20,12 +20,12 @@ class SearchInput extends StatelessWidget {
         Container(
           width: widthOfScreen - ((kSidePadding * 2) + kButtonWidth + 8),
           child: CustomTextFormField(
-            textFormFieldStyle: theme.textTheme.subtitle1.copyWith(
+            textFormFieldStyle: theme.textTheme.titleLarge?.copyWith(
               color: AppColors.secondaryColor,
             ),
             hintText: StringConst.SEARCH_HINT_TEXT,
             prefixIconColor: AppColors.primaryColor,
-            hintTextStyle: theme.textTheme.bodyText2.copyWith(
+            hintTextStyle: theme.textTheme.bodyMedium?.copyWith(
               color: AppColors.grey,
             ),
             filled: true,

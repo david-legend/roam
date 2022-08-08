@@ -26,10 +26,10 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  late double currentIndexPage;
+  late int pageLength;
   PageController _pageController = PageController();
-  double currentIndexPage;
 
-  int pageLength;
   List<OnBoardingItem> onBoardingItemList = [
     OnBoardingItem(
       ImagePath.BEAUTIFUL_SITES,
@@ -103,9 +103,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 
   Widget onBoardingItem({
-    @required String imagePath,
-    @required String title,
-    @required String subtitle,
+    required String imagePath,
+    required String title,
+    required String subtitle,
   }) {
     double widthOfScreen = assignWidth(context: context, fraction: 1.0);
     double heightOfScreen = assignHeight(context: context, fraction: 1.0);
@@ -132,14 +132,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             children: [
               Text(
                 title,
-                style: theme.textTheme.headline4.copyWith(
+                style: theme.textTheme.headlineLarge?.copyWith(
                   color: AppColors.white,
                 ),
               ),
               SpaceH8(),
               Text(
                 subtitle,
-                style: theme.textTheme.subtitle1.copyWith(
+                style: theme.textTheme.titleLarge?.copyWith(
                   color: AppColors.white,
                 ),
               ),
@@ -167,11 +167,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: Center(
                   child: CustomButton(
                     onPressed: () {
-                      ExtendedNavigator.root.push(Routes.loginScreen);
+
+                      AutoRouter.of(context).push(LoginScreenRoute());
                     },
                     title: StringConst.GET_STARTED,
                     borderRadius: Sizes.RADIUS_8,
-                    textStyle: theme.textTheme.subtitle1.copyWith(
+                    textStyle: theme.textTheme.titleLarge?.copyWith(
                       color: AppColors.white,
                     ),
                   ),

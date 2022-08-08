@@ -27,7 +27,7 @@ class AddCollaboratorsScreen extends StatelessWidget {
                   height: Sizes.HEIGHT_50,
                   child: CustomButton2(
                     onPressed: () {
-                      ExtendedNavigator.root.pop();
+                      AutoRouter.of(context).pop();
                     },
                     borderRadius: Sizes.RADIUS_12,
                     icon: Icons.arrow_back_ios,
@@ -41,19 +41,19 @@ class AddCollaboratorsScreen extends StatelessWidget {
             Center(
               child: Text(
                 StringConst.ADD_COLLABORATORS,
-                style: theme.textTheme.headline6.copyWith(
+                style: theme.textTheme.headlineSmall?.copyWith(
                   color: AppColors.black50,
                 ),
               ),
             ),
             SpaceH16(),
             CustomTextFormField(
-              textFormFieldStyle: theme.textTheme.subtitle1.copyWith(
+              textFormFieldStyle: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.secondaryColor,
               ),
               hintText: StringConst.SEARCH_HINT_TEXT_2,
               prefixIconColor: AppColors.primaryColor,
-              hintTextStyle: theme.textTheme.bodyText2.copyWith(
+              hintTextStyle: theme.textTheme.bodyMedium?.copyWith(
                 color: AppColors.grey,
               ),
               filled: true,
@@ -70,10 +70,10 @@ class AddCollaboratorsScreen extends StatelessWidget {
             SpaceH20(),
             CustomButton(
               onPressed: () {
-                ExtendedNavigator.root.pop();
+                AutoRouter.of(context).pop();
               },
               title: StringConst.FINISH,
-              textStyle: theme.textTheme.subtitle1.copyWith(
+              textStyle: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.white,
               ),
               borderRadius: Sizes.RADIUS_8,

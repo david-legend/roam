@@ -1,11 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:roam/presentation/layout/adaptive.dart';
 import 'package:roam/presentation/widgets/custom_appbar.dart';
-import 'package:roam/presentation/widgets/custom_button_2.dart';
-import 'package:roam/presentation/widgets/custom_text_form_field.dart';
 import 'package:roam/presentation/widgets/discover_card.dart';
 import 'package:roam/presentation/widgets/place_card.dart';
 import 'package:roam/presentation/widgets/search_input.dart';
@@ -20,24 +17,24 @@ const double kButtonWidth = Sizes.WIDTH_56;
 
 class DiscoverCardItem {
   DiscoverCardItem({
-    @required this.title,
-    @required this.icon,
+    required this.title,
+    required this.icon,
     this.color,
     this.backgroundColor,
   });
 
   final String title;
   final String icon;
-  final Color color;
-  final Color backgroundColor;
+  final Color? color;
+  final Color? backgroundColor;
 }
 
 class TrendingCardItem {
   TrendingCardItem({
-    @required this.title,
-    @required this.subtitle,
-    this.imagePath,
-    this.rating,
+    required this.title,
+    required this.subtitle,
+    required this.imagePath,
+    this.rating = 0,
   });
 
   final String title;
@@ -48,11 +45,11 @@ class TrendingCardItem {
 
 class PlaceCardItem {
   PlaceCardItem({
-    @required this.title,
-    @required this.subtitle,
-    @required this.content,
-    this.imagePath,
-    this.rating,
+    required this.title,
+    required this.subtitle,
+    required this.content,
+    required this.imagePath,
+    this.rating = 0,
   });
 
   final String title;
@@ -84,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Text(
             StringConst.TRAVEL,
-            style: theme.textTheme.headline5.copyWith(
+            style: theme.textTheme.headlineMedium?.copyWith(
               color: AppColors.primaryColor,
               fontSize: Sizes.TEXT_SIZE_28,
             ),
@@ -141,15 +138,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   imagePath: Data.trendingItems[index].imagePath,
                   rating: Data.trendingItems[index].rating,
                   onTap: () {
-                    ExtendedNavigator.root.push(
-                      Routes.placeScreen,
-                      arguments: PlaceScreenArguments(
-                        place: Data.trendingItems[index].title,
-                        location: Data.trendingItems[index].subtitle,
-                        imagePath: Data.trendingItems[index].imagePath,
-                        rating: Data.trendingItems[index].rating,
-                      ),
-                    );
+                    AutoRouter.of(context).push(PlaceScreenRoute(
+                      place: Data.trendingItems[index].title,
+                      location: Data.trendingItems[index].subtitle,
+                      imagePath: Data.trendingItems[index].imagePath,
+                      rating: Data.trendingItems[index].rating,
+                    ));
                   },
                 );
               },
@@ -189,38 +183,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _buildSearch() {
-    ThemeData theme = Theme.of(context);
-    double widthOfScreen = assignWidth(context: context, fraction: 1);
-    return Row(
-      children: [
-        Container(
-          width: widthOfScreen - ((kSidePadding * 2) + kButtonWidth + 8),
-          child: CustomTextFormField(
-            textFormFieldStyle: theme.textTheme.subtitle1.copyWith(
-              color: AppColors.secondaryColor,
-            ),
-            hintText: StringConst.SEARCH_HINT_TEXT,
-            prefixIconColor: AppColors.primaryColor,
-            hintTextStyle: theme.textTheme.bodyText2.copyWith(
-              color: AppColors.grey,
-            ),
-            filled: true,
-            fillColor: AppColors.white,
-            borderStyle: BorderStyle.solid,
-          ),
-        ),
-        SpaceW8(),
-        Container(
-          width: kButtonWidth,
-          height: Sizes.HEIGHT_56,
-          child: CustomButton2(
-            onPressed: () {},
-            borderRadius: Sizes.RADIUS_8,
-            icon: FeatherIcons.sliders,
-          ),
-        )
-      ],
-    );
-  }
 }

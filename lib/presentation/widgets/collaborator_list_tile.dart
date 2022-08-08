@@ -3,8 +3,8 @@ import 'package:roam/values/values.dart';
 
 class CollaboratorItem {
   CollaboratorItem({
-    @required this.title,
-    @required this.imagePath,
+    required this.title,
+    required this.imagePath,
   });
 
   final String title;
@@ -13,8 +13,8 @@ class CollaboratorItem {
 
 class CollaboratorListTile extends StatefulWidget {
   CollaboratorListTile({
-    @required this.title,
-    @required this.imagePath,
+    required this.title,
+    required this.imagePath,
     this.isSelected = false,
   });
 
@@ -27,7 +27,7 @@ class CollaboratorListTile extends StatefulWidget {
 }
 
 class _CollaboratorListTileState extends State<CollaboratorListTile> {
-  bool isSelected;
+  late bool isSelected;
 
   @override
   void initState() {
@@ -51,7 +51,7 @@ class _CollaboratorListTileState extends State<CollaboratorListTile> {
       ),
       title: Text(
         widget.title,
-        style: textTheme.subtitle1.copyWith(color: AppColors.black50),
+        style: textTheme.titleLarge?.copyWith(color: AppColors.black50),
       ),
       trailing: Container(
         child: Container(

@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:roam/routes/router.gr.dart';
 import 'package:roam/values/values.dart';
@@ -10,17 +9,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final _appRouter = AppRouter();
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: StringConst.APP_NAME,
       theme: AppTheme.lightThemeData,
-      builder: ExtendedNavigator<AppRouter>(
-        router: AppRouter(),
-        initialRoute: Routes.splashScreen,
-      ),
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

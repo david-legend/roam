@@ -35,9 +35,9 @@ class SignUpScreen extends StatelessWidget {
   Widget _socialLogin(BuildContext context) {
     ThemeData theme = Theme.of(context);
     double width = assignWidth(context: context, fraction: 1.0);
-    TextStyle hintTextStyle = theme.textTheme.bodyText2;
-    TextStyle titleTextStyle = theme.textTheme.subtitle1;
-    TextStyle formTextStyle = theme.textTheme.subtitle2.copyWith(
+    TextStyle? hintTextStyle = theme.textTheme.bodyMedium;
+    TextStyle? titleTextStyle = theme.textTheme.titleLarge;
+    TextStyle? formTextStyle = theme.textTheme.titleMedium?.copyWith(
       color: AppColors.black50,
     );
     return Column(
@@ -45,7 +45,7 @@ class SignUpScreen extends StatelessWidget {
         Spacer(),
         Text(
           StringConst.SIGN_UP,
-          style: theme.textTheme.headline5.copyWith(
+          style: theme.textTheme.headlineMedium?.copyWith(
             color: AppColors.secondaryColor,
           ),
         ),
@@ -59,7 +59,6 @@ class SignUpScreen extends StatelessWidget {
                 onPressed: () {},
                 borderRadius: Sizes.RADIUS_8,
                 color: AppColors.white,
-                hasIcon: true,
                 title: StringConst.GOOGLE,
                 icon: Image.asset(
                   ImagePath.GOOGLE,
@@ -74,7 +73,6 @@ class SignUpScreen extends StatelessWidget {
                 onPressed: () {},
                 borderRadius: Sizes.RADIUS_8,
                 color: AppColors.white,
-                hasIcon: true,
                 title: StringConst.FACEBOOK,
                 icon: Icon(
                   FontAwesomeIcons.facebookSquare,
@@ -146,7 +144,7 @@ class SignUpScreen extends StatelessWidget {
             onPressed: () {},
             borderRadius: Sizes.RADIUS_8,
             title: StringConst.SIGN_UP,
-            textStyle: theme.textTheme.subtitle1.copyWith(
+            textStyle: theme.textTheme.titleLarge?.copyWith(
               color: AppColors.white,
             ),
           ),
@@ -154,7 +152,7 @@ class SignUpScreen extends StatelessWidget {
         Spacer(),
         InkWell(
           onTap: () {
-            ExtendedNavigator.root.pop();
+            AutoRouter.of(context).pop();
           },
           child: Container(
             padding: EdgeInsets.only(
@@ -171,13 +169,13 @@ class SignUpScreen extends StatelessWidget {
             child: RichText(
               text: TextSpan(
                 text: StringConst.ALREADY_HAVE_AN_ACCOUNT,
-                style: theme.textTheme.bodyText2.copyWith(
+                style: theme.textTheme.bodyMedium?.copyWith(
                   color: AppColors.secondaryColor,
                 ),
                 children: <TextSpan>[
                   TextSpan(
                     text: StringConst.LOG_IN,
-                    style: theme.textTheme.bodyText2.copyWith(
+                    style: theme.textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: AppColors.secondaryColor,
                     ),

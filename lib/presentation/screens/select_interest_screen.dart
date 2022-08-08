@@ -40,20 +40,20 @@ class SelectInterestScreen extends StatelessWidget {
           RichText(
             text: TextSpan(
               text: StringConst.HELLO,
-              style: theme.textTheme.bodyText1.copyWith(
+              style: theme.textTheme.bodyLarge?.copyWith(
                 color: AppColors.secondaryColor,
               ),
               children: <TextSpan>[
                 TextSpan(
                   text: StringConst.KRISTIN,
-                  style: theme.textTheme.bodyText1.copyWith(
+                  style: theme.textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: AppColors.secondaryColor,
                   ),
                 ),
                 TextSpan(
                   text: StringConst.INTEREST,
-                  style: theme.textTheme.bodyText1.copyWith(
+                  style: theme.textTheme.bodyLarge?.copyWith(
                     color: AppColors.secondaryColor,
                   ),
                 ),
@@ -63,7 +63,7 @@ class SelectInterestScreen extends StatelessWidget {
           SpaceH16(),
           Text(
             StringConst.SELECT_5,
-            style: theme.textTheme.bodyText2.copyWith(
+            style: theme.textTheme.bodyMedium?.copyWith(
               color: AppColors.grey,
             ),
           ),
@@ -76,12 +76,12 @@ class SelectInterestScreen extends StatelessWidget {
           SpaceH24(),
           CustomButton(
             onPressed: () {
-              ExtendedNavigator.root.push(Routes.followScreen);
+              AutoRouter.of(context).push(FollowScreenRoute());
             },
             height: Sizes.HEIGHT_56,
             title: StringConst.NEXT,
             borderRadius: Sizes.RADIUS_8,
-            textStyle: theme.textTheme.subtitle1.copyWith(
+            textStyle: theme.textTheme.titleLarge?.copyWith(
               color: AppColors.white,
             ),
           ),

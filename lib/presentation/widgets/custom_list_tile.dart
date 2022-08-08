@@ -6,8 +6,8 @@ import 'package:roam/values/values.dart';
 
 class CustomListTile extends StatefulWidget {
   CustomListTile({
-    @required this.title,
-    @required this.imagePath,
+    required this.title,
+    required this.imagePath,
     this.stars = 0,
     this.isFollowing = false,
   });
@@ -22,7 +22,7 @@ class CustomListTile extends StatefulWidget {
 }
 
 class _CustomListTileState extends State<CustomListTile> {
-  bool isFollowing;
+  late bool isFollowing;
 
   @override
   void initState() {
@@ -52,7 +52,7 @@ class _CustomListTileState extends State<CustomListTile> {
       ),
       title: Text(
         widget.title,
-        style: theme.textTheme.subtitle1.copyWith(
+        style: theme.textTheme.titleLarge?.copyWith(
           color: AppColors.secondaryColor,
         ),
       ),
@@ -67,7 +67,7 @@ class _CustomListTileState extends State<CustomListTile> {
           Expanded(
             child: Text(
               "${widget.stars} ${StringConst.TRAVELLERS_STARS}",
-              style: theme.textTheme.bodyText2.copyWith(
+              style: theme.textTheme.bodyMedium?.copyWith(
                 color: AppColors.grey,
               ),
             ),
@@ -89,7 +89,7 @@ class _CustomListTileState extends State<CustomListTile> {
           elevation: Sizes.ELEVATION_0,
           onPressed: () => _toggleFollowButton(),
           title: isFollowing ? StringConst.FOLLOWING : StringConst.FOLLOW,
-          textStyle: theme.textTheme.subtitle1.copyWith(
+          textStyle: theme.textTheme.titleLarge?.copyWith(
             color: isFollowing ? AppColors.white : AppColors.grey,
             fontSize: Sizes.TEXT_SIZE_12,
           ),

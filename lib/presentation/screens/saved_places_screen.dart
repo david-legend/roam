@@ -28,7 +28,7 @@ class SavedPlacesScreen extends StatelessWidget {
             children: [
               Text(
                 StringConst.SAVED_PLACES,
-                style: theme.textTheme.headline5.copyWith(
+                style: theme.textTheme.headlineMedium?.copyWith(
                   color: AppColors.primaryColor,
                   fontSize: Sizes.TEXT_SIZE_28,
                 ),
@@ -38,7 +38,7 @@ class SavedPlacesScreen extends StatelessWidget {
               SpaceH20(),
               TabBar(
                 labelColor: AppColors.primaryColor,
-                labelStyle: theme.textTheme.subtitle1.copyWith(
+                labelStyle: theme.textTheme.titleLarge?.copyWith(
                   color: AppColors.primaryColor,
                   fontSize: Sizes.TEXT_SIZE_14,
                 ),

@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:animations/animations.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:roam/presentation/screens/discover_screen.dart';
-import 'package:roam/presentation/screens/plan_trip_screen.dart';
 import 'package:roam/presentation/screens/profile_screen.dart';
 import 'package:roam/presentation/screens/saved_places_screen.dart';
 import 'package:roam/presentation/widgets/spaces.dart';
 import 'package:roam/values/values.dart';
 
-import 'add_collaborators.dart';
 import 'home_screen.dart';
 
 class RootScreen extends StatefulWidget {
@@ -130,18 +127,19 @@ class _RootScreenState extends State<RootScreen> {
 }
 
 class ActiveIcon extends StatelessWidget {
-  ActiveIcon({this.icon, this.hasIcon = true, this.child});
+  ActiveIcon({this.icon, this.hasIcon = true, this.child})
+      : assert((hasIcon && icon != null) || (!hasIcon && child != null));
 
-  final IconData icon;
+  final IconData? icon;
   final bool hasIcon;
-  final Widget child;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
         children: [
-          hasIcon ? Icon(icon) : child,
+          hasIcon ? Icon(icon) : child!,
           SpaceH8(),
           Container(
             width: Sizes.WIDTH_4,

@@ -6,23 +6,23 @@ import 'package:roam/values/values.dart';
 
 class AttractionCardItem {
   AttractionCardItem({
-    @required this.title,
-    @required this.content,
-    @required this.imagePath,
+    required this.title,
+    required this.content,
+    required this.imagePath,
     this.rating,
   });
 
   final String title;
   final String imagePath;
   final String content;
-  final double rating;
+  final double? rating;
 }
 
 class AttractionCard extends StatelessWidget {
   AttractionCard({
-    @required this.title,
-    @required this.content,
-    @required this.imagePath,
+    required this.title,
+    required this.content,
+    required this.imagePath,
     this.width,
     this.height,
     this.borderRadius = const BorderRadius.all(
@@ -37,8 +37,8 @@ class AttractionCard extends StatelessWidget {
   final String title;
   final String content;
   final String imagePath;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final BorderRadiusGeometry borderRadius;
   final double rating;
   final double elevation;
@@ -83,7 +83,7 @@ class AttractionCard extends StatelessWidget {
                   Text(
                     title,
                     overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.subtitle1.copyWith(
+                    style: theme.textTheme.titleMedium?.copyWith(
                       color: AppColors.primaryText2,
                     ),
                   ),
@@ -94,7 +94,7 @@ class AttractionCard extends StatelessWidget {
                   Text(
                     content,
                     overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.bodyText2.copyWith(
+                    style: theme.textTheme.bodyMedium?.copyWith(
                       color: AppColors.primaryText3,
                     ),
                   )

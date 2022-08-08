@@ -7,9 +7,9 @@ const double kOffset = kWidth / 2;
 
 class StackedImages extends StatelessWidget {
   StackedImages({
-    @required this.images,
+    required this.images,
     this.hasMoreImages = true,
-    this.extraImagesLength,
+    this.extraImagesLength =0,
     this.width,
     this.widthOfImageItem = kWidth,
     this.heightOfImageItem = kHeight,
@@ -25,16 +25,16 @@ class StackedImages extends StatelessWidget {
   });
 
   final List<String> images;
-  final BorderRadiusGeometry borderRadius;
+  final BorderRadius? borderRadius;
   final bool hasMoreImages;
   final int extraImagesLength;
-  final double width;
+  final double? width;
   final double widthOfImageItem;
   final double heightOfImageItem;
   final double offset;
   final Color color;
   final Color textColor;
-  final double textSize;
+  final double? textSize;
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +91,7 @@ class StackedImages extends StatelessWidget {
                 child: Text(
                   "+$extraImagesLength",
                   overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.subtitle1.copyWith(
+                  style: theme.textTheme.titleLarge?.copyWith(
                     color: textColor,
                     fontSize: (textSize) ??
                         ("+$extraImagesLength".length >= 4

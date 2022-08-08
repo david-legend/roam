@@ -22,10 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void run() {
     Future.delayed(Duration(milliseconds: 1500), () {
-      ExtendedNavigator.root.pushAndRemoveUntil(
-        Routes.onBoardingScreen,
-        (Route<dynamic> route) => false,
-      );
+      AutoRouter.of(context).push(OnBoardingScreenRoute());
     });
   }
 
@@ -110,8 +107,8 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Text(
               StringConst.APP_NAME,
-              style: theme.textTheme.headline4
-                  .copyWith(color: AppColors.accentColor),
+              style: theme.textTheme.headlineLarge
+                  ?.copyWith(color: AppColors.accentColor),
             ),
             SpaceW48(),
             BgCard(
